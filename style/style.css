@@ -3,54 +3,58 @@ html, body {
     margin: 0px;
     padding: 0px;
     font-family: fangsong;
+    
 }
+header{
+    background: linear-gradient(50deg, #ff69b4, #ffeb3b);
+}
+/*
 .menu ul {
     display: flex;
-    /*justify-content: space-around; /* Espaça os itens uniformemente */
-    align-items: center;           /* Centraliza os itens verticalmente */
+    /*justify-content: space-around; 
+    align-items: center;           
     margin: 0;
-    padding: 0;                    /* Remove o padding padrão */
-    background-color: #f7aede;     /* Cor de fundo do menu */
-    list-style-type: none;         /* Remove as bolinhas das listas */
-    height: 4rem;                  /* Altura do menu */
+    padding: 0;                    
+    /*background-color: #f7aede;     
+    list-style-type: none;         
+    height: 4rem;                  
     
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-}
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
 .menu img {
     height: 40px;
-    margin-right: 10px;            /* Espaço entre a imagem e o texto */
+    margin-right: 10px;            
 }
 
 .menu li {
-    display: flex;                 /* Flexbox para centralizar conteúdo */
-    align-items: center;           /* Centraliza verticalmente o conteúdo */
-    margin: 0 0.5rem;              /* Margem horizontal entre os itens */
-    background-color: rgb(245, 103, 235); /* Cor de fundo dos itens do menu */
-    padding: 10px 20px;            /* Espaçamento interno dos itens */
-    border-radius: 10px;           /* Bordas arredondadas para os itens */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    display: flex;                 
+    align-items: center;           
+    margin: 0 0.5rem;              
+    /*background-color: rgb(245, 103, 235); 
+    padding: 10px 20px;            
+    border-radius: 10px;          
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .menu li:hover {
-    background-color: rgba(215, 91, 237, 0.637); /* Cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 10px rgba(241, 253, 4, 0.5); /* Sombra ao passar o mouse */
+    background-color: rgba(215, 91, 237, 0.637); /* Cor de fundo ao passar o mouse 
+    box-shadow: 0 4px 10px rgba(241, 253, 4, 0.5); /* Sombra ao passar o mouse 
 }
 
 .menu a {
-    text-decoration: none;         /* Remove sublinhado dos links */
-    color: #ffffff;                /* Cor do texto dos links */
-    font-weight: bold;             /* Texto em negrito */
+    text-decoration: none;         /* Remove sublinhado dos links 
+    color: #ffffff;                /* Cor do texto dos links 
+    font-weight: bold;             /* Texto em negrito 
 }
 
 .menu a:hover {
-    color: #f7aede;                /* Muda a cor do texto ao passar o mouse */
+    color: #f7aede;                /* Muda a cor do texto ao passar o mouse 
 }
-
+*/
 .name{
     font-size: 4rem;
     text-align: center;
-    background-color: #f7aede;;
+    /*background-color: #f7aede;;*/
     padding: 2rem 3px 0 0;
     margin: 0;
     border-bottom-style:solid;
@@ -214,4 +218,459 @@ html, body {
     width: 100;
     height: 100px;
 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047
+}
+/*login*/
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #480ca8;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px
+}
+
+.areaLogin img {
+    width: 420px;
+}
+
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+}
+
+.formLogin p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+
+.formLogin input:focus {
+    border: 1px solid #f72585;
+}
+
+.formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formLogin a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #555;
+    transition: all linear 160ms;
+}
+
+.formLogin a:hover {
+    color: #f72585;
+}
+
+.btn {
+    background-color: #f72585;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #ff0676;
+
+}
+
+/*sobre*/
+/* Estilo geral da seção "Sobre a Empresa" */
+.about-us {
+    background-color: #f4f4f4; /* Fundo leve */
+    padding: 50px 20px; /* Espaçamento interno */
+    font-family: 'Arial', sans-serif; /* Fonte profissional */
+}
+
+/* Container para centralizar o conteúdo */
+.about-us-container {
+    max-width: 1000px; /* Aumenta o tamanho máximo para acomodar imagem e texto */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo para o título */
+.about-us-container h2 {
+    font-size: 2.5em; /* Tamanho do título */
+    color: #333; /* Cor escura */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Container para imagem e texto */
+.about-us-content {
+    display: flex; /* Exibe imagem e texto lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça a imagem e o texto */
+    gap: 20px; /* Espaçamento entre imagem e texto */
+}
+
+/* Estilo para a imagem */
+.about-us-content img {
+    max-width: 45%; /* Limita a largura da imagem a 45% */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Canto arredondado para a imagem */
+}
+
+/* Estilo para o texto */
+.about-us-text {
+    max-width: 50%; /* Limita a largura do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para os parágrafos */
+.about-us-text p {
+    font-size: 1.1em; /* Tamanho da fonte */
+    color: #666; /* Cor suave */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    text-align: justify;
+}
+.recuo { text-indent:2em }
+
+
+a {
+    color: #007BFF; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+.descricao-cell{
+    overflow: auto; /* Permite rolagem se o conteúdo for longo */
+    max-width: 200px; /* Largura máxima da célula */
+    white-space: nowrap; /* Impede quebra de linha */
+    
+}
+
+/* Estilos Gerais da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+/* Estilos das Células */
+th, td {
+    padding: 6px 15px;
+    text-align: left;
+    border: 1.5px solid #ddd;
+}
+
+/* Estilos do Cabeçalho da Tabela */
+th {
+    background-color: #f2f2f2;
+}
+tr{
+    border-style: solid;
+
+}
+
+
+
+
+/* Estilos gerais do header */
+header {
+    display: flex;
+    flex-direction: column; /* Permite que o título e o menu sejam empilhados */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #f7aede; /* Cor de fundo do header */
+    padding: 1rem; /* Espaçamento interno do header */
+}
+
+.name {
+    font-size: 3rem; /* Tamanho do texto do título */
+    margin: 1rem 0; /* Margem vertical ao redor do título */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos gerais do menu */
+.menu {
+    display: flex;
+    justify-content: space-between; /* Espaça itens do menu e botão de alternância */
+    align-items: center;
+    width: 100%; /* Faz o menu ocupar toda a largura disponível */
+}
+
+.menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu img {
+    height: 40px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem; /* Margem horizontal entre os itens */
+    padding: 10px 20px; /* Espaçamento interno dos itens */
+    border-radius: 10px; /* Bordas arredondadas para os itens */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.menu li:hover {
+    background-color: rgba(215, 91, 237, 0.637); /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(241, 253, 4, 0.5); /* Sombra ao passar o mouse */
+}
+
+.menu a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #ffffff; /* Cor do texto dos links */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.menu a:hover {
+    color: #f7aede; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Estilos para o botão de alternância (menu hambúrguer) */
+.menu-toggle {
+    display: none; /* Oculta o botão de alternância por padrão */
+}
+.icon-bar {
+    display: block; /* Torna cada barra um bloco */
+    width: 25px; /* Largura da barra */
+    height: 3px; /* Altura da barra */
+    margin: 4px auto; /* Margem vertical entre as barras */
+    background-color: #333; /* Cor das barras */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+/* Menu responsivo */
+@media (max-width: 768px) {
+    
+
+    /* Faz a tabela rolar horizontalmente em telas pequenas */
+    table, thead, tbody, td, tr {
+        display: block;
+        
+    }
+    thead, th {
+        display: none; /* Oculta o cabeçalho */
+       
+    }
+    tr:first-child {
+        border-style: none;
+    }
+    tr {
+        margin-bottom: 15px; /* Espaçamento entre as linhas */
+    }
+    td {
+        min-height: 25px;
+        text-align: right; /* Alinha o texto à direita */
+        position: relative; /* Para o pseudo-elemento */
+        padding-left: 50%; /* Espaçamento para o pseudo-elemento */
+    }
+    td::before {
+        /* Adiciona o rótulo na frente do conteúdo da célula */
+        content: attr(data-label);
+        position: absolute;
+        left: 10px; /* Posição do rótulo */
+        width: calc(50% - 20px);
+        text-align: left; /* Alinha o rótulo à esquerda */
+        font-weight: bold; /* Deixa o rótulo em negrito */
+    }
+
+    .menu {
+        flex-direction: column; /* Alinha o menu verticalmente em telas pequenas */
+        align-items: flex-start; /* Alinha itens do menu à esquerda */
+    }
+    
+    .menu ul {
+        flex-direction: column; /* Alinha itens da lista verticalmente */
+        width: 100%; /* Garante que a lista ocupe a largura completa */
+        display: none; /* Oculta a lista por padrão em telas pequenas */
+    }
+
+    .menu ul.show {
+        display: flex; /* Mostra a lista quando ativado */
+    }
+    
+    .menu-toggle {
+        display: block; /* Mostra o botão de alternância em telas pequenas */
+        background-color: #f7aede; /* Cor de fundo do botão */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .menu-toggle img {
+        height: 30px; /* Tamanho do ícone do botão de alternância */
+    }
+
+    .name {
+        font-size: 1.5rem; /* Diminui o tamanho do título em telas pequenas */
+        text-align: center; /* Centraliza o título */
+        margin: 0.5rem 0; /* Margem reduzida em telas pequenas */
+    }
+    form {
+        padding: 15px; /* Reduz o preenchimento em telas menores */
+    }
+
+    input[type="text"] {
+        font-size: 14px; /* Ajusta o tamanho da fonte em telas menores */
+    }
+    
+    #file-button{
+        width: 30%;
+    }
+    .upload{
+        display: grid;
+        
+    }
+    .form-admin{
+        display: block;
+        flex-direction: column;
+    }
+    .form-cria,.editForm{
+        flex: 1 1 100%; 
+    }
+}
+@media (max-width: 480px) {
+    .form-cria,.editForm{  
+    flex: 1 1 auto;
+    }
+
+}
+
+
+form {
+    max-width: 500px;              /* Largura máxima do formulário */
+    margin: 20px auto;             /* Centraliza o formulário na página */
+    padding: 20px;                 /* Espaçamento interno */
+    border: 1px solid #ccc;        /* Borda do formulário */
+    border-radius: 10px;           /* Bordas arredondadas */
+    background-color: #f9f9f9;     /* Cor de fundo do formulário */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+form h2 {
+    text-align: center;             /* Centraliza o título */
+    color: #333;                    /* Cor do texto do título */
+}
+
+form label {
+    display: block;                 /* Faz o rótulo ocupar uma linha inteira */
+    margin-bottom: 5px;            /* Espaço abaixo dos rótulos */
+    font-weight: bold;              /* Texto em negrito */
+}
+
+input[type="text"], select {
+    width: 100%;                    /* Largura total do campo */
+    padding: 10px;                 /* Espaçamento interno */
+    margin-bottom: 15px;           /* Espaçamento abaixo dos campos */
+    border: 1px solid #ccc;        /* Borda do campo */
+    border-radius: 5px;            /* Bordas arredondadas */
+    box-sizing: border-box;        /* Inclui padding e borda na largura total */
+}
+
+form button {
+    width: 100%;                   /* Largura total do botão */
+    padding: 10px;                 /* Espaçamento interno do botão */
+    background-color: #28a745;     /* Cor de fundo do botão */
+    color: #ffffff;                /* Cor do texto do botão */
+    border: none;                  /* Sem borda */
+    border-radius: 5px;            /* Bordas arredondadas */
+    cursor: pointer;                /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+form button:hover {
+    background-color: #218838;     /* Cor de fundo ao passar o mouse */
+}
+
+
+.upload {
+    /*display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Centraliza verticalmente os itens */
+    margin: 20px 0; /* Margem vertical em torno do parágrafo */
+    padding: 10px; /* Preenchimento interno do parágrafo */
+    border: 1px solid #ccc; /* Borda do parágrafo */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo do parágrafo */
+    display: grid;
+}
+
+.upload label {
+    margin-right: 10px; /* Espaço entre o rótulo e o campo de entrada */
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor do texto do rótulo */
+    margin: 10px auto;
+    text-align: center;
+}
+
+.upload input[type="file"] {
+    /*margin-right: 10px; /* Espaço entre o campo de arquivo e o botão */
+    border: 1px solid #ccc; /* Borda do campo de entrada */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 5px; /* Preenchimento interno do campo */
+    font-size: 16px; /* Tamanho da fonte do campo */
+    margin: 10px auto;
+    width: 80%;
+}
+
+/* Estilo do botão */
+.upload button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas no botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin: 10px auto;
+}
+
+.form-admin{
+    display: flex;
+    align-items: flex-start;
+    /*justify-content: center;*/
 }

@@ -2,7 +2,7 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
 
 // Query para obter os departamentos distintos
-$sql = "SELECT DISTINCT departamento FROM projeto_individual.produtos";
+$sql = "SELECT DISTINCT departamento FROM projeto_individual.departamento";
 $result = mysqli_query($conn, $sql);
 
 if ($result->num_rows > 0) {
@@ -19,19 +19,19 @@ if ($result->num_rows > 0) {
 
 // Query para obter todos os produtos
 echo "<div class='prod'>";
-$sqlquery = "SELECT * FROM projeto_individual.produtos";
+$sqlquery = "SELECT * FROM projeto_individual.produtos as pd inner join projeto_individual.departamento as dp where dp.idDepartamento = pd.idDepartamento";
 $resultQuery = mysqli_query($conn, $sqlquery);
 
 if ($resultQuery->num_rows > 0) {
     while ($row2 = $resultQuery->fetch_assoc()) {
         $imagePath = "../imagens/" . htmlspecialchars($row2['arquivo']); // Ajuste conforme necessário
         echo "
-            <div class='product-item items-" . htmlspecialchars($row2['departamento']) . "'>
+            <div class='product-item items-" . htmlspecialchars($row2['Departamento']) . "'>
                 <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row2['nameProduto']) . "'>
                 <div class='info-prod'>
                     <h2>" . strtoupper(htmlspecialchars($row2['nameProduto'])) . "</h2>
                     <p>R$: " . number_format($row2['preco'], 2, ',', '.') . "</p>
-                    <p>Descrição: " . htmlspecialchars($row2['descricao']) . "</p>
+                    <span><b>Descrição: </b>" . htmlspecialchars($row2['descricao']) . "</span>
                     <button class='add-to-cart-btn'>
                         <span class='cart-icon'>🛒</span>
                         <span>Adicionar ao Carrinho</span>

@@ -9,20 +9,28 @@
         <title>Produtos</title>
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/styleDepartamento.css">
+        
     </head>
 
     <body>
-        <nav class="menu">
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="produto.php">Produto</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Carrinho</a></li>
-            </ul>
-            
-        </nav>
-        <h1 class="name">Delicias da Regi</h1>
-        
+        <header>
+            <nav class="menu">
+                <button class="menu-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="produto.php">Produto</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="">Carrinho</a></li>
+                    <li><a href="#">Conta</a></li>
+                </ul>
+
+            </nav>
+            <h1 class="name">Delicias da Regi</h1>
+        </header>
 
         <div class="container">
             <?php  
@@ -30,10 +38,10 @@
         ?>
         </div>
 
-       
+        
     </body>
 
     </html>
-    <script src="../script/depart-script.js"></script>
+    <script src="../script/scripts.js"></script>
 
 </php>
