@@ -411,6 +411,19 @@ tr{
     border-style: solid;
 
 }
+tr button{
+    background-color: #28a745;     /* Cor de fundo do botão */
+    color: #ffffff;                /* Cor do texto do botão */
+    border: none;                  /* Sem borda */
+    border-radius: 5px;            /* Bordas arredondadas */
+    cursor: pointer;                /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    padding: 10px;
+}
+tr button:hover{
+    background-color: #218838;     /* Cor de fundo ao passar o mouse */
+    cursor: pointer;
+}
 
 
 
@@ -424,11 +437,7 @@ header {
     padding: 1rem; /* Espaçamento interno do header */
 }
 
-.name {
-    font-size: 3rem; /* Tamanho do texto do título */
-    margin: 1rem 0; /* Margem vertical ao redor do título */
-    color: #333; /* Cor do texto */
-}
+
 
 /* Estilos gerais do menu */
 .menu {
@@ -549,7 +558,7 @@ header {
     }
 
     .name {
-        font-size: 1.5rem; /* Diminui o tamanho do título em telas pequenas */
+        font-size: 2.5rem; /* Diminui o tamanho do título em telas pequenas */
         text-align: center; /* Centraliza o título */
         margin: 0.5rem 0; /* Margem reduzida em telas pequenas */
     }
@@ -673,4 +682,29 @@ form button:hover {
     display: flex;
     align-items: flex-start;
     /*justify-content: center;*/
+}
+.hidden{
+    display: none;
+}
+.buttons-admin{
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    align-items: center;
+    align-content: space-between;
+   
+}
+.buttons-admin button{
+    width: 30%;                   /* Largura total do botão */
+    padding: 10px;                 /* Espaçamento interno do botão */
+    background-color: #28a745;     /* Cor de fundo do botão */
+    color: #ffffff;                /* Cor do texto do botão */
+    border: none;                  /* Sem borda */
+    border-radius: 5px;            /* Bordas arredondadas */
+    cursor: pointer;                /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+.buttons-admin button:hover{
+    background-color: #218838;     /* Cor de fundo ao passar o mouse */
+    cursor: pointer;
 }

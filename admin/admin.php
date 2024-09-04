@@ -28,21 +28,21 @@
             </nav>
             <h1 class="name">Delicias da Regi</h1>
         </header>
-        <section>
+        <section class='buttons-admin'>
             <button id='cria-button' type="button">Criar Produto</button>
             <button id='uploda-img' type="button">Upload Img</button>
             <button id='departamento-form' type="button">Departamento</button>
         </section>
         <section class='form-admin'>
-            <form class='form-cria' method="post" action="query/criarProduto.php">
+            <form class='form-cria hidden' id='form-cria' method="post" action="query/criarProduto.php">
                 <h2 style='text-align:center;'>Criar Produto</h2>
                 <label name='' for="">Nome</label>
                 <input type="text" name="nameProduto" id="nameProduto" placeholder='Nome do Produto'>
                 <label for="">Departamento</label>
                 <select name="departamento" id="departamento">
-                    <?php
-            include 'query/departamento.php';
-            ?>
+                <?php
+                include 'query/departamento.php';
+                 ?>
                 </select>
                 <label for="">Preço</label>
                 <input type="text" name="preco" id="preco" placeholder='R$:'>
@@ -63,14 +63,14 @@
                 <input type="text" name="descricao" id="descricao" placeholder="Informação do produto">
                 <button type='submit'>Criar</button>
             </form>
-            <form id='editForm' method='post' action='upload.php' enctype='multipart/form-data'>
+            <form class='hidden' id='editForm' method='post' action='upload.php' enctype='multipart/form-data'>
                 <p class='upload'>
                     <label for=''>Upload Imagen:</label>
                     <input name='upload' type='file' id='fileInput' onchange='updateFileName(this)' />
                     <button id='file-button' type='submit'>Enviar</button>
                 </p>
             </form>
-            <form action="query/criaDepartamento.php" id='cria-dep' method="post">
+            <form class='hidden' action="query/criaDepartamento.php" id='cria-dep' method="post">
                 <label for="">Criar Departamento</label>
                 <input type="text" name='novo-depat' id='cria-dep-input' placeholder='Nome do Departamento' required>
                 <button type='submit' id='cria-dep-button'>Criar</button>
@@ -84,8 +84,41 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.menu ul').classList.toggle('show');
         });
-        document.getElementById('departamento-form').addEventListener('click', function(){
-            
-        });
+        var criaProduto = document.getElementById("cria-button");
+        var upload = document.getElementById("uploda-img");
+        var departamento = document.getElementById("departamento-form");
+        var form1 = document.getElementById("form-cria");
+        var form2 = document.getElementById("cria-dep");
+        var form3 = document.getElementById("editForm");
+
+        criaProduto.onclick = function() {
+            form3.classList.add("hidden");
+            form2.classList.add("hidden");
+            if (form1.classList.contains("hidden")) {
+                form1.classList.remove("hidden");
+            } else {
+                form1.classList.add("hidden");
+            }
+        }
+
+        upload.onclick = function() {
+            form2.classList.add("hidden");
+            form1.classList.add("hidden");
+            if (form3.classList.contains("hidden")) {
+                form3.classList.remove("hidden");
+            } else {
+                form3.classList.add("hidden");
+            }
+        }
+
+        departamento.onclick = function() {
+            form1.classList.add("hidden");
+            form3.classList.add("hidden");
+            if (form2.classList.contains("hidden")) {
+                form2.classList.remove("hidden");
+            } else {
+                form2.classList.add("hidden");
+            }
+        }
         </script>
 </php>

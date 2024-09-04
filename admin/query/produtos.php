@@ -41,10 +41,10 @@ if ($resultQuery->num_rows > 0) {
                 <td data-label='Destaque'>" . htmlspecialchars($row2['destaque']) . "</td>
                 <td data-label='Carrosel'>" . htmlspecialchars($row2['carrosel']) . "</td>
                 <td data-label='Editar'>
-                    <button onclick='openModal(" . htmlspecialchars($row2['idProduto']) . ")'>Editar</button>
+                    <button  onclick='openModal(" . htmlspecialchars($row2['idProduto']) . ")'>Editar</button>
                 </td>
                 <td data-label='Excluir'>
-                    <button style='cursor:pointer;'' onclick='openExcluirModal(" . htmlspecialchars($row2['idProduto']) . ")'>Excluir</button>
+                    <button  onclick='openExcluirModal(" . htmlspecialchars($row2['idProduto']) . ")'>Excluir</button>
             </tr>";
     }
 } else {
@@ -148,9 +148,6 @@ function openExcluirModal(id){
         })
         .catch(error => console.error('Erro ao buscar dados do produto:', error));
 }
-document.getElementById("cancelDelete").onclick = function() {
-    document.getElementById('excluir').style.display = 'none';
-    }
 function closeModal() {
     document.getElementById('editModal').style.display = 'none';
     document.getElementById('excluir').style.display = 'none';

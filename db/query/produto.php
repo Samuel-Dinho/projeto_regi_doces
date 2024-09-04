@@ -2,11 +2,12 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
 
 // Query para obter os departamentos distintos
-$sql = "SELECT DISTINCT departamento FROM projeto_individual.departamento";
+$sql = "SELECT Distinct dp.departamento FROM projeto_individual.produtos as pd inner join projeto_individual.departamento as dp where dp.idDepartamento = pd.idDepartamento order by dp.departamento";
 $result = mysqli_query($conn, $sql);
 
 if ($result->num_rows > 0) {
     echo "<div class='departamento'>";
+    echo "<a href='#' class='department-link' data-department=''>Todos</a>";
     while ($row = $result->fetch_assoc()) {
         echo "
             <a href='#' class='department-link' data-department='" . htmlspecialchars($row['departamento']) . "'>" . strtoupper(htmlspecialchars($row['departamento'])) . "</a>
