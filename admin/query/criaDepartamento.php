@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $departamento = !empty($_POST['novo-depat']) ? $_POST['novo-depat'] : "";
 
     // Preparar a consulta SQL
-    $stmt = $conn->prepare("INSERT INTO projeto_individual.departamento (departamento) VALUE (?)");
+    $stmt = $conn->prepare("INSERT INTO projeto_final.categoria (categoria) VALUE (?)");
     
     // Verificar se a preparação da consulta foi bem-sucedida
     if ($stmt) {
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Executar a consulta
         if ($stmt->execute()) {
-            header('Location: ../admin.php');
+           header('Location: ../admin.php');
             exit; // Certifique-se de sair após o redirecionamento
         } else {
             echo "Erro ao inserir o produto: " . $stmt->error;

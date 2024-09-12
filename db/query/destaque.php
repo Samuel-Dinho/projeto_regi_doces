@@ -1,37 +1,35 @@
 <?php
- require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
 
-// Perform query
-$sql = "select * from projeto_individual.produtos where destaque = 1";
-  // Free result set
+// Perform query to get featured products
+$sql = "SELECT * FROM projeto_final.produto WHERE prod_destaque = 1";
+$result = mysqli_query($conn, $sql);
 
-  $result = mysqli_query($conn, $sql);
+if ($result->num_rows > 0) {
+    echo "<h2>Produtos em Destaque</h2>";
+    echo "<div class='products-grid'>";
 
-
-  if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        // Ajusta para remover barra inicial se existir
-        
-        // Monta o caminho correto
-        $imagePath = "../imagens/" . $row['arquivo']; // Ajuste conforme necessário
+        // Monta o caminho correto da imagem
+        $imagePath = "../imagens/" . htmlspecialchars($row['prod_arquivo']); // Ajuste conforme necessário
 
-        // Verifica a extensão do arquivo
-            echo "
-            <div class='grid-template'>
-                <div class='grid'>
-                    <h2>" . htmlspecialchars($row['nameProduto']) . "</h2>
-                    <a href='#' class='grid-item'>
-                        <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row['nameProduto']) . "' srcset=''>
-                    </a>
-                    <p>R$: " . number_format($row['preco'], 2, ',', '.') . "</p>
-                </div>
-            </div>";
-       
+        // Exibe o produto
+        echo "
+            <div class='grid-item'>
+                <a href='pages/produto.php#" . htmlspecialchars($row['prod_id_produto']) . "'>
+                    <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row['prod_nome_produto']) . "' class='product-image'>
+                </a>
+                <h2 class='product-title'>" . htmlspecialchars($row['prod_nome_produto']) . "</h2>
+                <p class='product-price'>R$: " . number_format($row['prod_preco'], 2, ',', '.') . "</p>
+                <button class='add-to-cart'>Adicionar ao Carrinho</button>
+            </div>
+        ";
     }
+
+    echo "</div>"; // Fecha o container dos produtos
 } else {
     echo "Nenhum produto encontrado.";
 }
-  mysqli_close($conn);
 
- 
+mysqli_close($conn);
 ?>

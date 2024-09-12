@@ -8,49 +8,7 @@ html, body {
 header{
     background: linear-gradient(50deg, #ff69b4, #ffeb3b);
 }
-/*
-.menu ul {
-    display: flex;
-    /*justify-content: space-around; 
-    align-items: center;           
-    margin: 0;
-    padding: 0;                    
-    /*background-color: #f7aede;     
-    list-style-type: none;         
-    height: 4rem;                  
-    
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
-.menu img {
-    height: 40px;
-    margin-right: 10px;            
-}
-
-.menu li {
-    display: flex;                 
-    align-items: center;           
-    margin: 0 0.5rem;              
-    /*background-color: rgb(245, 103, 235); 
-    padding: 10px 20px;            
-    border-radius: 10px;          
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.menu li:hover {
-    background-color: rgba(215, 91, 237, 0.637); /* Cor de fundo ao passar o mouse 
-    box-shadow: 0 4px 10px rgba(241, 253, 4, 0.5); /* Sombra ao passar o mouse 
-}
-
-.menu a {
-    text-decoration: none;         /* Remove sublinhado dos links 
-    color: #ffffff;                /* Cor do texto dos links 
-    font-weight: bold;             /* Texto em negrito 
-}
-
-.menu a:hover {
-    color: #f7aede;                /* Muda a cor do texto ao passar o mouse 
-}
-*/
 .name{
     font-size: 4rem;
     text-align: center;
@@ -67,158 +25,7 @@ header{
     text-align: left;
 }
 
-.carousel {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 5px;
-}
 
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    max-height: 300px;
-    margin: auto;
-}
-
-.carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
-}
-
-.carousel-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
-
-.carousel-item img {
-    display: block;
-    height: 200px;
-    max-width: 100%;
-    margin: 10px auto;
-}
-
-.carousel-control {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 40px;
-    z-index: 10;
-}
-
-.carousel-control.prev {
-    left: 2%;
-}
-
-.carousel-control.next {
-    right: 2%;
-}
-
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
-}
-
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
-    display: block;
-}
-
-.carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.carousel-bullet {
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 35px;
-}
-
-.carousel-bullet:hover {
-    color: #aaaaaa;
-}
-
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #428bca;
-}
-.slider{
-    overflow: hidden;
-
-}
-.slider > .slider-content{
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    transition: all 500ms ease;
-
-}
-
-.slider > .slider-content > .slider-item {
-    flex: 0 0 auto;
-    width: 100%;
-}
-
-.slider > input:nth-child(1):checked ~ .slider-content{
-    transform: translateX(0%);
-}
-
-.slider > input:nth-child(2):checked ~ .slider-content{
-    transform: translateX(-100%);
-}
-.slider > input:nth-child(3):checked ~ .slider-content{
-    transform: translateX(-200%);
-}
-
-.slider > input:nth-child(4):checked ~ .slider-content{
-    transform: translateX(-300%);
-}
-.grid {
-	display: grid;
-    margin: 10px auto;
-}
-
-/* 100px é o valor total, ignora conteúdo, margem e etc. Respeita apenas o min-width do item.*/
-.grid-template-columns-1 {
-	grid-template-columns: repeat(5, 1fr);
-    margin: 10px auto;
-    text-align: center;
-}
-.grid-item img{
-    width: 100;
-    height: 100px;
-
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -679,7 +486,7 @@ form button:hover {
 }
 
 .form-admin{
-    display: flex;
+    /*display: flex;
     align-items: flex-start;
     /*justify-content: center;*/
 }
@@ -708,3 +515,94 @@ form button:hover {
     background-color: #218838;     /* Cor de fundo ao passar o mouse */
     cursor: pointer;
 }
+#dep-grid{
+    margin: 10px auto;
+}
+#dep-grid table{
+    margin: 10 auto;
+    width: 50%;
+}
+.products-grid {
+    display: grid; /* Usando grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px; /* Espaçamento interno do contêiner */
+    align-items: start; /* Alinhamento dos itens ao topo */
+}
+
+.grid {
+    background-color: #fff; /* Fundo branco para o card */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden; /* Para não deixar a imagem sair do contêiner */
+    transition: transform 0.3s; /* Transição suave para efeito de hover */
+    text-align: center; /* Centraliza o texto */
+    max-height: 500px; /* Limita a altura máxima */
+    margin: auto; /* Centraliza os cards */
+}
+
+.grid:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho no hover */
+}
+
+.product-image {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Cobre o espaço mantendo a proporção */
+}
+
+.product-title {
+    font-size: 1.2rem; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+    overflow: hidden; /* Oculta o texto que excede */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto longo */
+    display: -webkit-box; /* Necessário para usar o truncamento com várias linhas */
+    -webkit-line-clamp: 3; /* Número máximo de linhas exibidas */
+    -webkit-box-orient: vertical; /* Orientação do box em vertical */
+}
+
+.product-price {
+    font-size: 1.2rem; /* Tamanho da fonte do preço */
+    color: #28A745; /* Cor verde para o preço */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+}
+
+.add-to-cart {
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para efeito de hover */
+    margin-bottom: 10px; /* Espaçamento abaixo do botão */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+}
+
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+    .grid {
+        max-height: none; /* Remove limite de altura em telas menores */
+        width: 90%; /* Aumenta a largura do card em telas menores */
+        margin: 10px auto; /* Espaçamento vertical para evitar que fiquem grudados */
+    }
+
+    .product-image {
+        height: 150px; /* Reduz a altura da imagem em telas menores */
+    }
+
+    .product-title, .product-price {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .add-to-cart {
+        padding: 8px 16px; /* Ajusta o padding do botão para telas menores */
+    }
+}
+
+
+

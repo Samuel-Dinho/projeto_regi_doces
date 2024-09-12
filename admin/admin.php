@@ -34,6 +34,7 @@
             <button id='departamento-form' type="button">Departamento</button>
         </section>
         <section class='form-admin'>
+            <!--Criar Produto-->
             <form class='form-cria hidden' id='form-cria' method="post" action="query/criarProduto.php">
                 <h2 style='text-align:center;'>Criar Produto</h2>
                 <label name='' for="">Nome</label>
@@ -51,7 +52,6 @@
                     <?php
                 // Diretório onde os arquivos estão armazenados
                 $uploadFileDir = '../imagens/';
-
                 // Obtém a lista de arquivos no diretório
                 $files = array_diff(scandir($uploadFileDir), array('..', '.'));
             foreach ($files as $file) {
@@ -61,8 +61,11 @@
                 </select>
                 <label for="">Descrição</label>
                 <input type="text" name="descricao" id="descricao" placeholder="Informação do produto">
+                <label for="">Rotulo</label>
+                <input type="text" name='rotulo' placeholder='Rotulo:'>
                 <button type='submit'>Criar</button>
             </form>
+        <!--fazer upload-->
             <form class='hidden' id='editForm' method='post' action='upload.php' enctype='multipart/form-data'>
                 <p class='upload'>
                     <label for=''>Upload Imagen:</label>
@@ -70,11 +73,19 @@
                     <button id='file-button' type='submit'>Enviar</button>
                 </p>
             </form>
-            <form class='hidden' action="query/criaDepartamento.php" id='cria-dep' method="post">
+        <!--Criar Departamento-->
+        <section class='hidden' id='cria-dep'>
+            <div id='dep-grid'>
+            <form  action="query/criaDepartamento.php" method="post">
                 <label for="">Criar Departamento</label>
                 <input type="text" name='novo-depat' id='cria-dep-input' placeholder='Nome do Departamento' required>
                 <button type='submit' id='cria-dep-button'>Criar</button>
             </form>
+            <?php
+                include 'query/tableDepartamento.php';
+            ?>
+            </div>
+        </section>
         </section>
         <?php
             include 'query/produtos.php';

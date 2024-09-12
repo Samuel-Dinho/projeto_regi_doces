@@ -8,9 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dest_path = $_POST['arquivo'];
     $preco = $_POST['preco'];
     $descricao = $_POST['descricao'];
+    $rotulo = $_POST['rotulo'];
 
     // Preparar a consulta SQL
-    $stmt = $conn->prepare("INSERT INTO projeto_individual.produtos (nameProduto, departamento,arquivo, preco, descricao) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO projeto_final.produto (prod_nome_produto, categoria_idcategoria,prod_arquivo, prod_preco, prod_descricao ,prod_rotulo) VALUES (?, ?, ?, ?, ?, ?)");
     
     // Verificar se a preparação da consulta foi bem-sucedida
     if ($stmt) {

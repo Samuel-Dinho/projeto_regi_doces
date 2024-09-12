@@ -1,16 +1,13 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
 
-if (isset($_GET['prod_id_produto'])) {
-    $idProduto = $_GET['prod_id_produto'];
+if (isset($_GET['idcategoria'])) {
+    $idcategoria = $_GET['idcategoria'];
     
     // Consulta para pegar os dados do produto
-    $sqlquery = "SELECT pd.*, d.categoria
-    FROM projeto_final.produto AS pd
-    JOIN projeto_final.categoria AS d
-    ON pd.categoria_idcategoria = d.idcategoria WHERE prod_id_produto  = ?";
+    $sqlquery = "SELECT * from projeto_final.categoria WHERE idcategoria  = ?";
     $stmt = $conn->prepare($sqlquery);
-    $stmt->bind_param("i", $idProduto);
+    $stmt->bind_param("i", $idcategoria);
     $stmt->execute();
     $result = $stmt->get_result();
     $produto = $result->fetch_assoc();

@@ -2,25 +2,27 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
 
 $sqlquery = "
-    SELECT pd.*, d.Departamento
-    FROM projeto_individual.produtos AS pd
-    JOIN projeto_individual.departamento AS d
-    ON pd.idDepartamento = d.idDepartamento
+    SELECT pd.*, d.categoria
+    FROM projeto_final.produto AS pd
+    JOIN projeto_final.categoria AS d
+    ON pd.categoria_idcategoria = d.idcategoria
 ";
 $resultQuery = mysqli_query($conn, $sqlquery);
 
 
-
+echo "<h2 style='text-align:center;'>Produtos</h2>";
 echo "<table>
         <tr>
             <th >Id Produto</th>
             <th >Nome</th>
-            <th >Departamento</th>
+            <th >Categoria</th>
             <th >Preço</th>
             <th >Descrição</th>
+            <th >Rotulo</th>
             <th >Local</th>
             <th >Destaque</th>
             <th >Carrosel</th>
+            <th> Quantidade</th>
             <th >Editar</th>
             <th >Excluir</th>
         </tr>";
@@ -28,23 +30,25 @@ echo "<table>
 if ($resultQuery->num_rows > 0) {
     while ($row2 = $resultQuery->fetch_assoc()) {
         // Substitui 1 e 0 por "Sim" e "Não"
-        $row2['destaque'] = $row2['destaque'] == 1 ? 'Sim' : 'Não';
-        $row2['carrosel'] = $row2['carrosel'] == 1 ? 'Sim' : 'Não';
+        $row2['prod_destaque'] = $row2['prod_destaque'] == 1 ? 'Sim' : 'Não';
+        $row2['prod_carrosel'] = $row2['prod_carrosel'] == 1 ? 'Sim' : 'Não';
 
         echo "<tr>
-                <td data-label='id Produto'>" . htmlspecialchars($row2['idProduto']) . "</td>
-                <td data-label='Nome'>" . htmlspecialchars($row2['nameProduto']) . "</td>
-                <td data-label='Departamento'> " . htmlspecialchars($row2['Departamento']) . "</td>
-                <td data-label='Preço'>R$: " . number_format($row2['preco'], 2, ',', '.') . "</td>
-                <td data-label='Descrição' class='descricao-cell'>" . htmlspecialchars($row2['descricao']) . "</td>
-                <td data-label='Local'>" . htmlspecialchars($row2['arquivo']) . "</td>
-                <td data-label='Destaque'>" . htmlspecialchars($row2['destaque']) . "</td>
-                <td data-label='Carrosel'>" . htmlspecialchars($row2['carrosel']) . "</td>
+                <td data-label='id Produto'>" . htmlspecialchars($row2['prod_id_produto']) . "</td>
+                <td data-label='Nome'>" . htmlspecialchars($row2['prod_nome_produto']) . "</td>
+                <td data-label='Categoria'> " . htmlspecialchars($row2['categoria']) . "</td>
+                <td data-label='Preço'>R$: " . number_format($row2['prod_preco'], 2, ',', '.') . "</td>
+                <td data-label='Descrição' class='descricao-cell'>" . htmlspecialchars($row2['prod_descricao']) . "</td>
+                <td data-label='Rotulo'> " . htmlspecialchars($row2['prod_rotulo']) . "</td>
+                <td data-label='Local'>" . htmlspecialchars($row2['prod_arquivo']) . "</td>
+                <td data-label='Destaque'>" . htmlspecialchars($row2['prod_destaque']) . "</td>
+                <td data-label='Carrosel'>" . htmlspecialchars($row2['prod_carrosel']) . "</td>
+                <td data-label='Quantidade'>" . htmlspecialchars($row2['prod_quantidade']) . "</td>
                 <td data-label='Editar'>
-                    <button  onclick='openModal(" . htmlspecialchars($row2['idProduto']) . ")'>Editar</button>
+                    <button  onclick='openModal(" . htmlspecialchars($row2['prod_id_produto']) . ")'>Editar</button>
                 </td>
                 <td data-label='Excluir'>
-                    <button  onclick='openExcluirModal(" . htmlspecialchars($row2['idProduto']) . ")'>Excluir</button>
+                    <button  onclick='openExcluirModal(" . htmlspecialchars($row2['prod_id_produto']) . ")'>Excluir</button>
             </tr>";
     }
 } else {
@@ -62,7 +66,7 @@ echo "<div id='excluir' class='modal' style='display:none;'>
     <form method='post' action='query/excluir.php'>
         <span class='close' style='float:right; cursor:pointer;' onclick='closeModal()'>&times;</span>
         <label>ID Produto</label>
-        <input name='idProduto' readonly id='modalExcluirIdProduto'></input>
+        <input name='prod_id_produto' readonly id='modalExcluirIdProduto'></input>
         <label>Nome Produto</label>
         <input readonly id='modalExcluirNameProduto'></input>
         <label>Departamento</label>
@@ -80,7 +84,7 @@ echo "<div id='editModal' class='modal' style='display:none;'>
             <span class='close' onclick='closeModal()'>&times;</span>
             <h2>Editar Produto</h2>
             <form id='editForm' method='post' action='atualizar_produto.php'>
-                <input type='hidden' name='idProduto' id='modalIdProduto' />
+                <input type='hidden' name='prod_id_produto' id='modalIdProduto' />
                 <label>Nome:</label>
                 <input type='text' name='nameProduto' id='modalNameProduto' required />
                 <label>Departamento</label>
@@ -93,6 +97,8 @@ echo "
                 <input type='text' name='preco' id='modalPreco' required />
                 <label>Descrição:</label>
                 <textarea name='descricao' id='modalDescricao' required></textarea>
+                <label>Rotulo:</label>
+                <input type='text' name='rotulo' id='rotulo'</input>
                 <label>Arquivo:</label>
                 <select name='arquivo'  id='modalArquivo' required>";
             foreach ($files as $file) {
@@ -109,7 +115,9 @@ echo "
                     <option value='1'>Sim</option>
                     <option value='0'>Não</option>
                 </select>
-                <input type='submit' value='Atualizar' />
+                <label>Quantidade</label>
+                <input type:'text' name='quantidade' id='quantidade'></input>
+                <input  type='submit' value='Atualizar' />
             </form>
         </div>
     </div>";
@@ -120,30 +128,37 @@ mysqli_close($conn);
 
 <script>
 function openModal(id) {
-    fetch('get_produto.php?idProduto=' + id)
+    fetch('get_produto.php?prod_id_produto=' + id)
         .then(response => response.json())
         .then(data => {
-            document.getElementById('modalIdProduto').value = data.idProduto;
-            document.getElementById('modalNameProduto').value = data.nameProduto;
-            document.getElementById('modalDepartamento').value = data.idDepartamento;
-            document.getElementById('modalPreco').value = data.preco;
-            document.getElementById('modalDescricao').value = data.descricao;
-            document.getElementById('modalArquivo').value = data.arquivo;
-            document.getElementById('modalDestaque').value = data.destaque;
-            document.getElementById('modalCarrosel').value = data.carrosel;
+            document.getElementById('modalIdProduto').value = data.prod_id_produto;
+            document.getElementById('modalNameProduto').value = data.prod_nome_produto;
+            document.getElementById('modalDepartamento').value = data.categoria_idcategoria;
+            document.getElementById('rotulo').value = data.prod_rotulo;
+            document.getElementById('quantidade').value = data.prod_quantidade;
+
+            // Formatar o valor em estilo brasileiro (R$, com vírgula para decimal e ponto para milhar)
+            
+            document.getElementById('modalPreco').value = data.prod_preco;
+
+            document.getElementById('modalDescricao').value = data.prod_descricao;
+            document.getElementById('modalArquivo').value = data.prod_arquivo;
+            document.getElementById('modalDestaque').value = data.prod_destaque;
+            document.getElementById('modalCarrosel').value = data.prod_carrosel;
 
             document.getElementById('editModal').style.display = 'block';
         })
         .catch(error => console.error('Erro ao buscar dados do produto:', error));
 }
+
 function openExcluirModal(id){
-    fetch('get_produto.php?idProduto=' + id)
+    fetch('get_produto.php?prod_id_produto=' + id)
         .then(response => response.json())
         .then(data => {
-            document.getElementById('modalExcluirIdProduto').value = data.idProduto;
-            document.getElementById('modalExcluirNameProduto').value = data.nameProduto;
-            document.getElementById('modalExcluirDepartamento').value = data.idDepartamento;
-            document.getElementById('modalExcluirPreco').value = data.preco;
+            document.getElementById('modalExcluirIdProduto').value = data.prod_id_produto;
+            document.getElementById('modalExcluirNameProduto').value = data.prod_nome_produto;
+            document.getElementById('modalExcluirDepartamento').value = data.categoria;
+            document.getElementById('modalExcluirPreco').value = data.prod_preco;
             document.getElementById('excluir').style.display = 'block';
         })
         .catch(error => console.error('Erro ao buscar dados do produto:', error));
@@ -151,6 +166,8 @@ function openExcluirModal(id){
 function closeModal() {
     document.getElementById('editModal').style.display = 'none';
     document.getElementById('excluir').style.display = 'none';
+    document.getElementById('editCategoriaModal').style.display = 'none';
+    document.getElementById('excluirCategoria').style.display ='none';
 }
 
 window.onclick = function(event) {
