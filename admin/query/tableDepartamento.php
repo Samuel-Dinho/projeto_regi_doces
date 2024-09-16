@@ -71,29 +71,28 @@ echo "<table>
 ?>
 <script>
     function editaCategoriaModal(id) {
-        fetch('get_categoria.php?idcategoria=' +id)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('modalIdcategoria').value = data.idcategoria;
-                document.getElementById('modalCategoria').value = data.categoria;
+    fetch('get_categoria.php?idcategoria=' +id)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('modalIdcategoria').value = data.idcategoria;
+            document.getElementById('modalCategoria').value = data.categoria;
 
-                document.getElementById('editCategoriaModal').style.display = 'block';
-            })
-            .catch(error => console.error('Erro ao buscar dados da Categoria:', error));
-    }
-    function excluirCategoriaModal(id){
-        fetch('get_categoria.php?idcategoria=' +id)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('modalExcluirIdCategoria').value = data.idcategoria;
-                document.getElementById('modalExCategoria').value = data.categoria;
+            document.getElementById('editCategoriaModal').style.display = 'block';
+        })
+        .catch(error => console.error('Erro ao buscar dados da Categoria:', error));
+}
 
-                document.getElementById('excluirCategoria').style.display = 'block';
-            })
-            .catch(error => console.error('Erro ao buscar dados da Categoria:', error));
-    }
-    
+function excluirCategoriaModal(id) {
+    fetch('get_categoria.php?idcategoria=' + id)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('modalExcluirIdCategoria').value = data.idcategoria;
+            document.getElementById('modalExCategoria').value = data.categoria;
 
+            document.getElementById('excluirCategoria').style.display = 'block';
+        })
+        .catch(error => console.error('Erro ao buscar dados da Categoria:', error));
+}
 </script>
 <?
 mysqli_close($conn);

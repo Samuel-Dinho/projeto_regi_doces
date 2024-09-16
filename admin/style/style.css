@@ -1,0 +1,36 @@
+.table-image img{
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto;
+}
+
+.table-image tr , table td{
+    width: 20%;
+    height: 20%;
+    text-align: center;
+}
+.table-image {
+    margin: auto;
+    overflow: auto;
+    max-height: 450px;
+}
+.table-image th{
+    background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+    position: sticky;
+    top: 0; /* Fixa o cabeçalho no topo da tabela */
+    z-index: 2; /* Garante que o cabeçalho fique acima do conteúdo */
+    border-top: 1px solid #ddd; /* Adiciona a borda superior */
+    border-bottom: 1px solid #ddd; /* Adiciona a borda inferior */
+}
+.title{ 
+    padding: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.div-table{
+    width: 60%;
+    margin: 10px auto;
+    max-height: 500px;
+    overflow: auto;
+}

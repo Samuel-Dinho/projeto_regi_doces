@@ -100,11 +100,17 @@ echo "
                 <label>Rotulo:</label>
                 <input type='text' name='rotulo' id='rotulo'</input>
                 <label>Arquivo:</label>
-                <select name='arquivo'  id='modalArquivo' required>";
+                
+                <select name='arquivo' id='modalArquivo' required onchange='updatePreview()' onmouseover='showPreview()' >
+                ";
             foreach ($files as $file) {
-                echo "<option value='" . htmlspecialchars($file) . "'>" . htmlspecialchars($file) . "</option>";
+                echo "<option onmouseover='showImage('../imagens/" . htmlspecialchars($file) . "')' value='" . htmlspecialchars($file) . "'>" . htmlspecialchars($file) . " </option>";
             }
-            echo "</select>
+            
+            echo "
+            </select>
+            <img id='preview' src='' alt='' style'display:'none';'>
+            
                 <label>Destaque:</label>
                 <select name='destaque' id='modalDestaque'>
                     <option value='1'>Sim</option>
@@ -125,182 +131,5 @@ echo "
 // Fechar conexão
 mysqli_close($conn);
 ?>
-
-<script>
-function openModal(id) {
-    fetch('get_produto.php?prod_id_produto=' + id)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('modalIdProduto').value = data.prod_id_produto;
-            document.getElementById('modalNameProduto').value = data.prod_nome_produto;
-            document.getElementById('modalDepartamento').value = data.categoria_idcategoria;
-            document.getElementById('rotulo').value = data.prod_rotulo;
-            document.getElementById('quantidade').value = data.prod_quantidade;
-
-            // Formatar o valor em estilo brasileiro (R$, com vírgula para decimal e ponto para milhar)
-            
-            document.getElementById('modalPreco').value = data.prod_preco;
-
-            document.getElementById('modalDescricao').value = data.prod_descricao;
-            document.getElementById('modalArquivo').value = data.prod_arquivo;
-            document.getElementById('modalDestaque').value = data.prod_destaque;
-            document.getElementById('modalCarrosel').value = data.prod_carrosel;
-
-            document.getElementById('editModal').style.display = 'block';
-        })
-        .catch(error => console.error('Erro ao buscar dados do produto:', error));
-}
-
-function openExcluirModal(id){
-    fetch('get_produto.php?prod_id_produto=' + id)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('modalExcluirIdProduto').value = data.prod_id_produto;
-            document.getElementById('modalExcluirNameProduto').value = data.prod_nome_produto;
-            document.getElementById('modalExcluirDepartamento').value = data.categoria;
-            document.getElementById('modalExcluirPreco').value = data.prod_preco;
-            document.getElementById('excluir').style.display = 'block';
-        })
-        .catch(error => console.error('Erro ao buscar dados do produto:', error));
-}
-function closeModal() {
-    document.getElementById('editModal').style.display = 'none';
-    document.getElementById('excluir').style.display = 'none';
-    document.getElementById('editCategoriaModal').style.display = 'none';
-    document.getElementById('excluirCategoria').style.display ='none';
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('editModal');
-    if (event.target === modal) {
-        closeModal();
-    }
-}
-</script>
-
-<style>
-/* Estilos para o modal */
-.modal {
-    display: none;
-    /* Mantém o modal oculto por padrão */
-    position: fixed;
-    /* Fixa o modal na tela */
-    z-index: 1000;
-    /* Garante que o modal fique acima de outros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    /* Habilita a rolagem caso o conteúdo do modal seja muito grande */
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Fundo semitransparente */
-    backdrop-filter: blur(5px);
-    /* Adiciona um leve desfoque ao fundo */
-}
-
-/* Estilos para o conteúdo do modal */
-.modal-content {
-    background-color: #fff;
-    /* Cor de fundo branca */
-    margin: 5% auto;
-    /* Centraliza o modal na tela */
-    padding: 20px;
-    /* Espaçamento interno */
-    border-radius: 8px;
-    /* Bordas arredondadas */
-    width: 90%;
-    /* Largura do modal */
-    max-width: 600px;
-    /* Largura máxima para telas maiores */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra ao redor do modal */
-    animation: fadeIn 0.3s ease;
-    /* Animação de aparição suave */
-}
-
-/* Estilos para o botão de fechar */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #333;
-    /* Cor mais escura ao passar o mouse */
-    text-decoration: none;
-    /* Remove sublinhado */
-}
-
-/* Estilos para os campos do formulário */
-.modal-content form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-.modal-content form input[type="text"],
-.modal-content form textarea,
-.modal-content form select {
-    width: 100%;
-    /* Largura total do campo */
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    /* Borda padrão */
-    border-radius: 4px;
-    /* Bordas levemente arredondadas */
-    box-sizing: border-box;
-    /* Inclui padding e borda na largura total */
-}
-
-.modal-content form input[type="submit"] {
-    background-color: #28a745;
-    /* Cor de fundo verde */
-    color: white;
-    /* Texto branco */
-    padding: 10px 20px;
-    /* Espaçamento interno */
-    border: none;
-    /* Remove borda padrão */
-    border-radius: 4px;
-    /* Bordas arredondadas */
-    cursor: pointer;
-    /* Cursor de ponteiro */
-    margin-top: 10px;
-    /* Espaçamento superior */
-    width: 100%;
-    /* Largura total do botão */
-}
-
-.modal-content form input[type="submit"]:hover {
-    background-color: #218838;
-    /* Fundo mais escuro ao passar o mouse */
-}
-.btn-confirm {
-            background-color: #f44336; /* Vermelho */
-            margin: 10px auto;
-        }
-
-.btn-cancel {
-            background-color: #555; /* Cinza */
-            margin: 10px auto;
-}
-
-/* Animação de aparição suave */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-</style>
+<script src="script/produto.js"></script>i
+<link rel="stylesheet" href="style/produto.css">

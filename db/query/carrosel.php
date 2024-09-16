@@ -66,32 +66,4 @@ mysqli_close($conn);
 ?>
 
 
-<style>
-.fixed-caption {
-    position: absolute;
-    /*bottom: 20px; /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white; /* Cor do texto */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    /*padding:5px; /* Espaçamento interno */
-    width: 100%; /* Para garantir que ocupe toda a largura */
-}
-
-.carousel-item {
-    height: 300px; /* Altura fixa do carrossel */
-}
-
-@media (max-width: 768px) {
-    .fixed-caption {
-        bottom: 30px; /* Ajuste para telas menores */
-        padding: 5px; /* Ajuste o padding para telas menores */
-    }
-
-    .carousel-item {
-        height: 250px; /* Altura menor para telas menores */
-    }
-}
-
-</style>
+<link rel="stylesheet" href="../../style/style.css">

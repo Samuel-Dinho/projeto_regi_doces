@@ -1,4 +1,10 @@
 <php>
+    <?php
+  // Diretório onde os arquivos estão armazenados
+  $uploadFileDir = '../imagens/';
+  // Obtém a lista de arquivos no diretório
+  $files = array_diff(scandir($uploadFileDir), array('..', '.'));
+    ?>
     <!DOCTYPE html>
     <html lang="pt-br">
 
@@ -7,9 +13,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Produtos</title>
         <link rel="stylesheet" href="../../style/style.css">
+        <link rel="stylesheet" href="style/style.css">
     </head>
 
     <body>
+
         <header>
             <nav class="menu">
                 <button class="menu-toggle">
@@ -30,8 +38,8 @@
         </header>
         <section class='buttons-admin'>
             <button id='cria-button' type="button">Criar Produto</button>
-            <button id='uploda-img' type="button">Upload Img</button>
-            <button id='departamento-form' type="button">Departamento</button>
+            <button id='uploda-img' type="button">Imagen</button>
+            <button id='departamento-form' type="button">Categoria</button>
         </section>
         <section class='form-admin'>
             <!--Criar Produto-->
@@ -39,97 +47,123 @@
                 <h2 style='text-align:center;'>Criar Produto</h2>
                 <label name='' for="">Nome</label>
                 <input type="text" name="nameProduto" id="nameProduto" placeholder='Nome do Produto'>
-                <label for="">Departamento</label>
+                <label for="">categoria</label>
                 <select name="departamento" id="departamento">
-                <?php
+                    <?php
                 include 'query/departamento.php';
                  ?>
                 </select>
                 <label for="">Preço</label>
                 <input type="text" name="preco" id="preco" placeholder='R$:'>
                 <label for="">Imagen</label>
-                <select name='arquivo' required>"
+                <select name='arquivo' id='arquivoSelect' required>
                     <?php
-                // Diretório onde os arquivos estão armazenados
-                $uploadFileDir = '../imagens/';
-                // Obtém a lista de arquivos no diretório
-                $files = array_diff(scandir($uploadFileDir), array('..', '.'));
-            foreach ($files as $file) {
-                echo "<option value='" . htmlspecialchars($file) . "'>" . htmlspecialchars($file) . "</option>";
-            }
-            ?>
+                // Exibe cada arquivo como uma opção no select
+                foreach ($files as $file) {
+                    echo "<option value='" . htmlspecialchars($file) . "'>" . htmlspecialchars($file) . "</option>";
+                }
+                ?>
                 </select>
+
+                <!-- Aqui a imagem será exibida -->
+                <div class="image-container">
+                    <img id="imagePreview" src="" alt="Preview da imagem"
+                        style="max-width: 150px; max-height: 150px; display: none;">
+                </div>
                 <label for="">Descrição</label>
                 <input type="text" name="descricao" id="descricao" placeholder="Informação do produto">
                 <label for="">Rotulo</label>
                 <input type="text" name='rotulo' placeholder='Rotulo:'>
                 <button type='submit'>Criar</button>
             </form>
-        <!--fazer upload-->
-            <form class='hidden' id='editForm' method='post' action='upload.php' enctype='multipart/form-data'>
-                <p class='upload'>
-                    <label for=''>Upload Imagen:</label>
-                    <input name='upload' type='file' id='fileInput' onchange='updateFileName(this)' />
+            <!--fazer upload-->
+            <div class='hidden' id='edit-form'>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <p>Selecione a imagem:</p>
+                    <input type="file" name="image" id='fileInput' onchange='updateFileName(this)'>
+                    <p>Nome do arquivo desejado (sem extensão):</p>
+                    <input type="text" name="filename">
                     <button id='file-button' type='submit'>Enviar</button>
-                </p>
-            </form>
-        <!--Criar Departamento-->
-        <section class='hidden' id='cria-dep'>
-            <div id='dep-grid'>
-            <form  action="query/criaDepartamento.php" method="post">
-                <label for="">Criar Departamento</label>
-                <input type="text" name='novo-depat' id='cria-dep-input' placeholder='Nome do Departamento' required>
-                <button type='submit' id='cria-dep-button'>Criar</button>
-            </form>
-            <?php
-                include 'query/tableDepartamento.php';
+                </form>
+                <div class='div-table'>
+                    <table class='table-image'>
+                        <thead>
+                            <th>ID</th>
+                            <th>nome</th>
+                            <th>Imagen</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
+                        </thead>
+                        <?php
+            $posicao = 1; // Inicializa a variável $posicao
+            foreach ($files as $arquivo) {
+                echo "
+                <tr>
+                <td style='width: 5%'>$posicao</td>
+                <td style='width: 10%'>". htmlspecialchars($arquivo) ."</td>
+                <td style='width: 5%'><img src='../imagens/" . htmlspecialchars($arquivo) . "' alt='' srcset=''></td>
+                <td><button onclick='openImageModal(\"" . htmlspecialchars($arquivo) . "\")'>Editar</button></td>
+                <td style='width: 5%'><button  onclick='excluirCategoriaModal(". htmlspecialchars($arquivo) .")'>Exluir</button>
+                </tr>"
+                ;
+                $posicao++; // Incrementa a posição
+            }
             ?>
+                    </table>
+
+                </div>
             </div>
+            <!--Criar Departamento-->
+            <section class='hidden' id='cria-dep'>
+                <div id='dep-grid'>
+                    <form action="query/criaDepartamento.php" method="post">
+                        <div>
+                            <label for="">Criar Categoria</label>
+                            <input type="text" name='novo-depat' id='cria-dep-input' placeholder='Nome do Departamento'
+                                required>
+                            <button type='submit' id='cria-dep-button'>Criar</button>
+                        </div>
+                    </form>
+                    <div>
+                        <?php
+                include 'query/tableDepartamento.php';
+                ?>
+
+                    </div>
+            </section>
         </section>
-        </section>
+        <div id='editImageModal' class='modal' style='display:none;'>
+            <div class=''>
+
+                <h2>Editar Produto</h2>
+                <form id='editForm' method='post' action=''>
+                    <span class='close' onclick='closeImageModal()'>&times;</span>
+                    <input type='hidden' name='idImage' id='modalIdImage' />
+                    <label>Nome:</label>
+                    <input type='text' name='nameImage' id='modalNameImage' required />
+                    <label for="">Imagem</label>
+                    <img id="qualquer" src="" alt="Imagem do Modal" />
+
+                </form>
+            </div>
+        </div>
+        
         <?php
             include 'query/produtos.php';
         ?>
-
+        <script src="script/admin.js"></script>
         <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.menu ul').classList.toggle('show');
-        });
-        var criaProduto = document.getElementById("cria-button");
-        var upload = document.getElementById("uploda-img");
-        var departamento = document.getElementById("departamento-form");
-        var form1 = document.getElementById("form-cria");
-        var form2 = document.getElementById("cria-dep");
-        var form3 = document.getElementById("editForm");
-
-        criaProduto.onclick = function() {
-            form3.classList.add("hidden");
-            form2.classList.add("hidden");
-            if (form1.classList.contains("hidden")) {
-                form1.classList.remove("hidden");
-            } else {
-                form1.classList.add("hidden");
-            }
+        function openImageModal(fileName) {
+            // Define os campos do modal com as informações da imagem
+            document.getElementById('modalIdImage').value = fileName;
+            document.getElementById('modalNameImage').value = fileName; // Você pode customizar o que será exibido
+            // Exibe o modal
+            document.getElementById('editImageModal').style.display = 'block';
         }
 
-        upload.onclick = function() {
-            form2.classList.add("hidden");
-            form1.classList.add("hidden");
-            if (form3.classList.contains("hidden")) {
-                form3.classList.remove("hidden");
-            } else {
-                form3.classList.add("hidden");
-            }
-        }
-
-        departamento.onclick = function() {
-            form1.classList.add("hidden");
-            form3.classList.add("hidden");
-            if (form2.classList.contains("hidden")) {
-                form2.classList.remove("hidden");
-            } else {
-                form2.classList.add("hidden");
-            }
+        function closeImageModal() {
+            // Oculta o modal de edição de imagem
+            document.getElementById('editImageModal').style.display = 'none';
         }
         </script>
 </php>
