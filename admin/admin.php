@@ -135,7 +135,7 @@
         <div id='editImageModal' class='modal' style='display:none;'>
             <div class=''>
 
-                <h2>Editar Produto</h2>
+                <h2>Editar imagen</h2>
                 <form id='editForm' method='post' action=''>
                     <span class='close' onclick='closeImageModal()'>&times;</span>
                     <input type='hidden' name='idImage' id='modalIdImage' />
@@ -152,18 +152,4 @@
             include 'query/produtos.php';
         ?>
         <script src="script/admin.js"></script>
-        <script>
-        function openImageModal(fileName) {
-            // Define os campos do modal com as informações da imagem
-            document.getElementById('modalIdImage').value = fileName;
-            document.getElementById('modalNameImage').value = fileName; // Você pode customizar o que será exibido
-            // Exibe o modal
-            document.getElementById('editImageModal').style.display = 'block';
-        }
-
-        function closeImageModal() {
-            // Oculta o modal de edição de imagem
-            document.getElementById('editImageModal').style.display = 'none';
-        }
-        </script>
 </php>

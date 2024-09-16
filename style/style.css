@@ -198,7 +198,7 @@ a:hover {
 /* Estilos Gerais da Tabela */
 table {
     width: 100%;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     margin: 20px 0;
     font-size: 16px;
 }

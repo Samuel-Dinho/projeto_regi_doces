@@ -70,8 +70,11 @@ window.onload = function() {
 
 function openImageModal(fileName) {
     // Define os campos do modal com as informações da imagem
-    document.getElementById('modalNameImage').value = fileName; // Customiza o que será exibido
-    document.getElementById('qualquer').src = "../../imagens/" + fileName; // Corrigido para getElementById
+    console.log(fileName);
+    document.getElementById('modalNameImage').value = fileName; // Customiza o que será exibido*/
+    let imagem = document.getElementById('qualquer');
+    imagem.setAttribute("src",`../imagens/${fileName}`);
+    /*asset("../imagens/" + fileName); // Corrigido para getElementById*/
     document.getElementById('editImageModal').style.display = 'block'; // Exibe o modal
 }
 
