@@ -28,7 +28,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="pages/produto.php">Produto</a></li>
                     <li><a href="pages/sobre.php">Sobre</a></li>
-                    <li><a href="">Carrinho</a></li>
+                    <li><a href="pages/carrinho.php">Carrinho</a></li>
                     <li><a href="pages/conta.php">Conta</a></li>
                 </ul>
             </nav>

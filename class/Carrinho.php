@@ -1,6 +1,6 @@
 <?php
-
 // Inicializa o carrinho se ainda não existir
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
@@ -34,9 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['cart'][$itemIdToRemove]['quantity'] = $quantity - 1;
             if($quantity <= 0 ){
                 unset($_SESSION['cart'][$itemIdToRemove]);
-                header('Location: Carrinho.php');
+                header('Location: ../pages/index.php');
             }
-            header('Location: Carrinho.php');
+            header('Location: ../index.php');
         }
     }
 }
@@ -80,31 +80,36 @@ function displayCarte() {
                         
                     </td>
                 </tr>";
+
+
             
       }
-      
-  } else {
-      echo "Seu carrinho está vazio.";
-  }
-  $valorTotal;
-  if($valorTotal <=0 )  {
-    $valorTotal = 0;
-  }
+
+      $finalValue = $valorTotal ? number_format($valorTotal, 2) : 0;
+
+
   echo"
         <div class='cart-summary'>
             <h3>Resumo do Pedido</h3>
-            <p>Subtotal: " . number_format($valorTotal, 2, ',', '.') ."</p>
+            <p>Subtotal: " . $finalValue ."</p>
             <p>Frete: Grátis</p>
             
-            <h2>Total: ". number_format($valorTotal, 2, ',', '.') ."</h2>
+            <h2>Total: ". $finalValue. "</h2>
             <button class='checkout-btn'>Finalizar Compra</button>
         </div>
       ";
+      
+  } else {
+      echo "Seu carrinho está vazio.";
+
+  }
+
+//   isset
+  
+      
 }
 
 
 
 
 
-
-?>
