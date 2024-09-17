@@ -26,6 +26,6 @@ require 'Carrinho.php';
 
     <hr>
 
-    <?php displayCart(); ?>
+    <?php displayCarte(); ?>
 </body>
 </html>

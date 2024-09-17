@@ -10,7 +10,7 @@ require '../class/Carrinho.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="styles.css">
+ 
 </head>
 <body>
     <div class="cart-container">
@@ -23,7 +23,7 @@ require '../class/Carrinho.php';
             <thead>
                 <tr>
                     <th>Produto</th>
-                    <th>Preço</th>
+                    <th>Preço(un)</th>
                     <th>Quantidade</th>
                     <th>Total</th>
                     <th>Ação</th>
@@ -31,33 +31,12 @@ require '../class/Carrinho.php';
             </thead>
             <tbody>
             <?php displayCarte(); ?>
-                <tr>
-                    <td>
-                        <div class="product-info">
-                            <img src="https://via.placeholder.com/100" alt="Produto 1">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td>R$ 50,00</td>
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
-                    <td>R$ 50,00</td>
-                    <td>
-                        <button class="remove-btn">Remover</button>
-                    </td>
-                </tr>
+                
             
             </tbody>
         </table>
 
-        <div class="cart-summary">
-            <h3>Resumo do Pedido</h3>
-            <p>Subtotal: R$ 110,00</p>
-            <p>Frete: Grátis</p>
-            <h2>Total: R$ 110,00</h2>
-            <button class="checkout-btn">Finalizar Compra</button>
-        </div>
+        
     </div>
 </body>
 </html>
