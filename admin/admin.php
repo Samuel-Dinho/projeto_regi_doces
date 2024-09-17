@@ -80,8 +80,8 @@
             <div class='hidden' id='edit-form'>
                 <form action="upload.php" method="post" enctype="multipart/form-data">
                     <p>Selecione a imagem:</p>
-                    <input type="file" name="image" id='fileInput' onchange='updateFileName(this)'>
-                    <p>Nome do arquivo desejado (sem extensão):</p>
+                    <input type="file" name="image" id='fileInput' onchange='updateFileName(this)' required>
+                    <p required >Nome do arquivo desejado (sem extensão):</p>
                     <input type="text" name="filename">
                     <button id='file-button' type='submit'>Enviar</button>
                 </form>
