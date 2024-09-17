@@ -1,13 +1,55 @@
 <?php
+
 require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
+include '../class/Carrinho.php';
+
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
+    $itemId = $_POST['item_id'];
+    $nomeProduto = $_POST['nomeProduto'];
+    $valor = $_POST['valor'];
+    $quantity = 1;
+    $imagePath = $_POST['imagePath'];
+
+    // Verifica se o carrinho já existe
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = []; // Inicializa o carrinho se não existir
+    }
+
+    // Verifica se o item já existe no carrinho
+    if (isset($_SESSION['cart'][$itemId])) {
+        // Atualiza a quantidade do item existente
+        $_SESSION['cart'][$itemId]['quantity'] += $quantity;
+    } else {
+        // Adiciona o novo item ao carrinho
+        $_SESSION['cart'][$itemId] = [
+            'nomeProduto' => $nomeProduto,
+            'valor' => $valor,
+            'quantity' => $quantity,
+            'imagePath' => $imagePath
+
+        ];
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['remove'])) {
+        $itemIdToRemove = $_POST['remove'];
+        // Verifica se o item existe no carrinho
+        if (isset($_SESSION['cart'][$itemIdToRemove])) {
+            // Remove o item do carrinho
+            unset($_SESSION['cart'][$itemIdToRemove]);
+        }
+    }
+}
+
+
 
 // Query para obter os departamentos distintos
 $sql = "SELECT Distinct dp.categoria FROM projeto_final.produto as pd inner join projeto_final.categoria as dp where dp.idcategoria = pd.categoria_idcategoria order by dp.categoria";
 $result = mysqli_query($conn, $sql);
 
-if (isset($_GET['prod_id_produto'])) {
-    
-}
 if ($result->num_rows > 0) {
     echo "<div class='departamento'>";
     echo "<a href='#' class='department-link' data-department=''>Todos</a>";
@@ -18,7 +60,7 @@ if ($result->num_rows > 0) {
     }
     echo "</div>";
 } else {
-    echo "Nenhuma Categoria encontrado.";
+    echo "Nenhuma Categoria encontrada.";
 }
 
 // Query para obter todos os produtos
@@ -28,20 +70,27 @@ $resultQuery = mysqli_query($conn, $sqlquery);
 
 if ($resultQuery->num_rows > 0) {
     while ($row2 = $resultQuery->fetch_assoc()) {
-        $imagePath = "../imagens/" . htmlspecialchars($row2['prod_arquivo']); // Ajuste conforme necessário
+        $imagePath = "../imagens/" . htmlspecialchars($row2['prod_arquivo']);
         echo "
-            <div name='" .  htmlspecialchars($row2['prod_id_produto']) . "' id='" .  htmlspecialchars($row2['prod_id_produto']) . "'class='product-item items-" . htmlspecialchars($row2['categoria']) . "'>
-                <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
-                <div class='info-prod'>
+        <div name='" . htmlspecialchars($row2['prod_id_produto']) . "' id='" . htmlspecialchars($row2['prod_id_produto']) . "' class='product-item items-" . htmlspecialchars($row2['categoria']) . "'>
+            <div class='info-prod'>
+                <form method='post'>
                     <h2>" . strtoupper(htmlspecialchars($row2['prod_nome_produto'])) . "</h2>
-                    <p>R$: " . number_format($row2['prod_preco'], 2, ',', '.') . "</p>
+                    <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
+                    <input type='hidden' name='imagePath' value='". htmlspecialchars($imagePath) ."'>
+                    <input type='hidden' name='imageAlt' value='" . htmlspecialchars($row2['prod_nome_produto']). "'>
+                    <p>R$: " . number_format($row2['prod_preco'], 2, ',', '.') . "</p> <!-- Exibir o preço diretamente -->
                     <span><b>Descrição: </b>" . htmlspecialchars($row2['prod_descricao']) . "</span>
-                    <button class='add-to-cart-btn'>
-                        <span class='cart-icon'>🛒</span>
-                        <span>Adicionar ao Carrinho</span>
+                    <input type='hidden' name='item_id' value='" . htmlspecialchars($row2['prod_id_produto']) . "'>
+                    <input type='hidden' name='nomeProduto' value='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
+                    <input type='hidden' name='valor' value='" . htmlspecialchars($row2['prod_preco']) . "'>
+                    
+                    <button class='add-to-cart-btn' type='submit' name='add_to_cart'>
+                        <span class='cart-icon'>🛒</span> Adicionar ao Carrinho
                     </button>
-                </div>
+                </form>
             </div>
+        </div>
         ";
     }
 } else {
@@ -50,5 +99,5 @@ if ($resultQuery->num_rows > 0) {
 echo "</div>";
 
 mysqli_close($conn);
-?>
 
+?>

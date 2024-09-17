@@ -1,4 +1,7 @@
 <php>
+    <?php
+
+    ?>
 
     <!DOCTYPE html>
     <html lang="pt-br">
@@ -9,7 +12,7 @@
         <title>Produtos</title>
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/styleDepartamento.css">
-        
+
     </head>
 
     <body>
@@ -38,10 +41,10 @@
         ?>
         </div>
 
-        
+
     </body>
 
     </html>
     <script src="../script/scripts.js"></script>
-
+   
 </php>
