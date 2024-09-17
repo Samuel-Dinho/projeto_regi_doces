@@ -34,3 +34,15 @@
     max-height: 500px;
     overflow: auto;
 }
+#imagenModal{
+    width: 150px;
+    max-height: 150px;
+    margin:10px auto;
+    display: block;
+}
+#oldName, #extensao{
+    background-color: rgba(128, 128, 128, 0.671);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}

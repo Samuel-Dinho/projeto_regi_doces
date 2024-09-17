@@ -97,12 +97,14 @@
                         <?php
             $posicao = 1; // Inicializa a variável $posicao
             foreach ($files as $arquivo) {
+                $extencao = pathinfo($arquivo, PATHINFO_EXTENSION);
+                $nome = pathinfo($arquivo, PATHINFO_FILENAME);
                 echo "
                 <tr>
                 <td style='width: 5%'>$posicao</td>
                 <td style='width: 10%'>". htmlspecialchars($arquivo) ."</td>
-                <td style='width: 5%'><img src='../imagens/" . htmlspecialchars($arquivo) . "' alt='' srcset=''></td>
-                <td><button onclick='openImageModal(\"" . htmlspecialchars($arquivo) . "\")'>Editar</button></td>
+                <td style='width: 5%'><img src='../imagens/" . htmlspecialchars($nome) . ".". htmlspecialchars($extencao) ."' alt='' srcset=''></td>
+                <td><button onclick='openImageModal(\"" . htmlspecialchars($nome) . "\",\"". htmlspecialchars($extencao) ."\")'>Editar</button></td>
                 <td style='width: 5%'><button  onclick='excluirCategoriaModal(". htmlspecialchars($arquivo) .")'>Exluir</button>
                 </tr>"
                 ;
@@ -136,14 +138,14 @@
             <div class=''>
 
                 <h2>Editar imagen</h2>
-                <form id='editForm' method='post' action=''>
+                <form id='editForm' method='post' action='query/alterarImage.php'>
                     <span class='close' onclick='closeImageModal()'>&times;</span>
                     <input type='hidden' name='idImage' id='modalIdImage' />
-                    <label>Nome:</label>
-                    <input type='text' name='nameImage' id='modalNameImage' required />
-                    <label for="">Imagem</label>
-                    <img id="qualquer" src="" alt="Imagem do Modal" />
-
+                    <p>Nome:<input readonly name='oldName' id='oldName' for=""></input></p>
+                    <p>Extensão:<input name ='extensao' id='extensao'></input></p>
+                    <p>Alterar Nome:<input type='text' name='nameImage' id='modalNameImage' required /></p>
+                    <p>Imagem<img id="imagenModal" src="" alt="Imagem Produto" /></p>
+                    <button type="submit">Alterar</button>
                 </form>
             </div>
         </div>
