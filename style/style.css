@@ -302,6 +302,16 @@ header {
     background-color: #333; /* Cor das barras */
     transition: background-color 0.3s; /* Transição suave para mudança de cor */
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Para o Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 /* Menu responsivo */
 @media (max-width: 768px) {
     
@@ -379,7 +389,7 @@ header {
         padding: 15px; /* Reduz o preenchimento em telas menores */
     }
 
-    input[type="text"] {
+    input[type="text"], input[type="number"]{
         font-size: 14px; /* Ajusta o tamanho da fonte em telas menores */
     }
     
@@ -427,7 +437,7 @@ form label {
     font-weight: bold;              /* Texto em negrito */
 }
 
-input[type="text"], select {
+input[type="text"], select ,input[type="number"] {
     width: 100%;                    /* Largura total do campo */
     padding: 10px;                 /* Espaçamento interno */
     margin-bottom: 15px;           /* Espaçamento abaixo dos campos */

@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verificar se a preparação da consulta foi bem-sucedida
     if ($stmt) {
         // Vincular parâmetros
-        $stmt->bind_param("sssds", $nameProduto, $departamento,$dest_path, $preco, $descricao); // "ssis" indica os tipos: string, string, int, string
+        $stmt->bind_param("sisdss", $nameProduto, $departamento,$dest_path, $preco, $descricao, $rotulo); // "ssis" indica os tipos: string, string, int, string
 
         // Executar a consulta
         if ($stmt->execute()) {

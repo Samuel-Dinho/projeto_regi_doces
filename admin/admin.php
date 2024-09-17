@@ -46,15 +46,15 @@
             <form class='form-cria hidden' id='form-cria' method="post" action="query/criarProduto.php">
                 <h2 style='text-align:center;'>Criar Produto</h2>
                 <label name='' for="">Nome</label>
-                <input type="text" name="nameProduto" id="nameProduto" placeholder='Nome do Produto'>
+                <input type="text" name="nameProduto" id="nameProduto" placeholder='Nome do Produto' required>
                 <label for="">categoria</label>
-                <select name="departamento" id="departamento">
+                <select name="departamento" id="departamento" required>
                     <?php
                 include 'query/departamento.php';
                  ?>
                 </select>
                 <label for="">Preço</label>
-                <input type="text" name="preco" id="preco" placeholder='R$:'>
+                <input type="number" name="preco" id="preco" placeholder='R$:' required>
                 <label for="">Imagen</label>
                 <select name='arquivo' id='arquivoSelect' required>
                     <?php
@@ -71,9 +71,9 @@
                         style="max-width: 150px; max-height: 150px; display: none;">
                 </div>
                 <label for="">Descrição</label>
-                <input type="text" name="descricao" id="descricao" placeholder="Informação do produto">
+                <input type="text" name="descricao" id="descricao" placeholder="Informação do produto" required>
                 <label for="">Rotulo</label>
-                <input type="text" name='rotulo' placeholder='Rotulo:'>
+                <input type="text" name='rotulo' placeholder='Rotulo:' required>
                 <button type='submit'>Criar</button>
             </form>
             <!--fazer upload-->
@@ -81,8 +81,8 @@
                 <form action="upload.php" method="post" enctype="multipart/form-data">
                     <p>Selecione a imagem:</p>
                     <input type="file" name="image" id='fileInput' onchange='updateFileName(this)' required>
-                    <p required >Nome do arquivo desejado (sem extensão):</p>
-                    <input type="text" name="filename">
+                    <p  >Nome do arquivo desejado (sem extensão):</p>
+                    <input required type="text" name="filename">
                     <button id='file-button' type='submit'>Enviar</button>
                 </form>
                 <div class='div-table'>
