@@ -86,7 +86,7 @@
                     <button id='file-button' type='submit'>Enviar</button>
                 </form>
                 <div class='div-table'>
-                    <table class='table-image'>
+                    <table class=''>
                         <thead>
                             <th>ID</th>
                             <th>nome</th>
@@ -101,11 +101,11 @@
                 $nome = pathinfo($arquivo, PATHINFO_FILENAME);
                 echo "
                 <tr>
-                <td style='width: 5%'>$posicao</td>
-                <td style='width: 10%'>". htmlspecialchars($arquivo) ."</td>
-                <td style='width: 5%'><img src='../imagens/" . htmlspecialchars($nome) . ".". htmlspecialchars($extencao) ."' alt='' srcset=''></td>
-                <td><button onclick='openImageModal(\"" . htmlspecialchars($nome) . "\",\"". htmlspecialchars($extencao) ."\")'>Editar</button></td>
-                <td style='width: 5%'><button  onclick='excluirCategoriaModal(". htmlspecialchars($arquivo) .")'>Exluir</button>
+                <td data-label='id' >$posicao</td>
+                <td data-label='Nome' >". htmlspecialchars($arquivo) ."</td>
+                <td data-label='Imagen'><img src='../imagens/" . htmlspecialchars($nome) . ".". htmlspecialchars($extencao) ."' alt='' srcset=''></td>
+                <td data-label='Editar' > <button onclick='openImageModal(\"" . htmlspecialchars($nome) . "\",\"". htmlspecialchars($extencao) ."\")'>Editar</button></td>
+                <td data-label='excluir' ><button  onclick='openExcluiImagenModal(\"". htmlspecialchars($arquivo) ."\")'>Exluir</button>
                 </tr>"
                 ;
                 $posicao++; // Incrementa a posição
@@ -142,14 +142,26 @@
                     <span class='close' onclick='closeImageModal()'>&times;</span>
                     <input type='hidden' name='idImage' id='modalIdImage' />
                     <p>Nome:<input readonly name='oldName' id='oldName' for=""></input></p>
-                    <p>Extensão:<input name ='extensao' id='extensao'></input></p>
+                    <p>Extensão:<input name='extensao' id='extensao'></input></p>
                     <p>Alterar Nome:<input type='text' name='nameImage' id='modalNameImage' required /></p>
                     <p>Imagem<img id="imagenModal" src="" alt="Imagem Produto" /></p>
                     <button type="submit">Alterar</button>
                 </form>
             </div>
         </div>
-        
+        <div id='excluidImagenModal' class='modal' style='display:none;'>
+            <div class=''>
+                <h2>Excluir Imagen</h2>
+                <form id='editForm' method='post' action="query/deletaImage.php">
+                <span class='close' onclick='closeImageModal()'>&times;</span>
+                <input name='NomeImage' id='NomeImage'></input>
+                <p>Imagem<img id="ExcluiImagenModal" src="" alt="Imagem Produto" /></p>
+                <button type="submit" class='btn btn-confirm'>Exluir</button>
+                </form>
+            </div>
+
+
+        </div>
         <?php
             include 'query/produtos.php';
         ?>

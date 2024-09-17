@@ -311,23 +311,26 @@ header {
         display: block;
         
     }
-    thead, th {
+    thead, th  {
         display: none; /* Oculta o cabeçalho */
        
     }
     tr:first-child {
         border-style: none;
     }
-    tr {
+    .div-table table tr:first-child{
+        border-style: solid;
+    }
+    tr{
         margin-bottom: 15px; /* Espaçamento entre as linhas */
     }
-    td {
+    td  {
         min-height: 25px;
         text-align: right; /* Alinha o texto à direita */
         position: relative; /* Para o pseudo-elemento */
         padding-left: 50%; /* Espaçamento para o pseudo-elemento */
     }
-    td::before {
+    td::before  {
         /* Adiciona o rótulo na frente do conteúdo da célula */
         content: attr(data-label);
         position: absolute;
@@ -335,6 +338,9 @@ header {
         width: calc(50% - 20px);
         text-align: left; /* Alinha o rótulo à esquerda */
         font-weight: bold; /* Deixa o rótulo em negrito */
+    }
+    .div-table{
+        width: 100%;
     }
 
     .menu {

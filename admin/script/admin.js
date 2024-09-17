@@ -81,5 +81,15 @@ function openImageModal(fileName,extencao) {
 function closeImageModal() {
     // Oculta o modal de edição de imagem
     document.getElementById('editImageModal').style.display = 'none';
+    document.getElementById('excluidImagenModal').style.display = 'none';
 }
+
+function openExcluiImagenModal(fileName){
+    let idImage = document.getElementById('NomeImage');
+    idImage.value =  fileName;
+    let imagem = document.getElementById('ExcluiImagenModal');
+    imagem.src = `../imagens/` + fileName;
+    document.getElementById('excluidImagenModal').style.display = 'block'; // Exibe o modal
+}
+
 
