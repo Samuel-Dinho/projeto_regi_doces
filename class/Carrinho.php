@@ -12,6 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_SESSION['cart'][$itemIdToRemove])) {
             // Remove o item do carrinho
             unset($_SESSION['cart'][$itemIdToRemove]);
+            $quantidadeToRemove = $_SESSION['cart'][$itemIdToRemove]['quantity'];
+            $_SESSION['valorFinal']  = $quantidadeToRemove - $_SESSION['valorFinal'];
+            if($_SESSION['valorFinal']<= 0){
+                $_SESSION['valorFinal'] = 0;
+            }
             header('Location: Carrinho.php');
         }
     }
@@ -34,23 +39,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['cart'][$itemIdToRemove]['quantity'] = $quantity - 1;
             if($quantity <= 0 ){
                 unset($_SESSION['cart'][$itemIdToRemove]);
-                header('Location: ../pages/index.php');
+                header('Location: Carrinho.php');
             }
-            header('Location: ../index.php');
+            header('Location: Carrinho.php');
         }
     }
 }
 
 function displayCarte() {
+    
   if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    $valorTotal = 0;
+        $_SESSION['valorFinal'] = 0;
+    
+    
       foreach ($_SESSION['cart'] as $itemId => $itemData) {
+          $valorTotal = $_SESSION['valorFinal'];
           $nomeProduto = $itemData['nomeProduto'];
           $valor = $itemData['valor'];
           $quantity = $itemData['quantity'];
           $imagePath = $itemData['imagePath'];
           $total = $valor * $quantity;
-          $valorTotal = $valor * $quantity + $valorTotal;
+          $_SESSION['valorFinal'] = $valor * $quantity + $valorTotal;
           echo "<tr>
                     <td>
                         <div class='product-info'>
@@ -75,7 +84,7 @@ function displayCarte() {
                     <td>
                     <form method='POST' style='display:inline;'>
                     <input  type='hidden' name='remove' value='" . htmlspecialchars($itemId) . "'>
-                    <input class='remove-btn' type='submit' value='Remover'>
+                    <input id='click' onclick='openJanelaCarrinho(". htmlspecialchars($nomeProduto) .")' class='remove-btn' type='submit' value='Remover'>
                     </form>
                         
                     </td>
@@ -84,28 +93,22 @@ function displayCarte() {
 
             
       }
-
-      $finalValue = $valorTotal ? number_format($valorTotal, 2) : 0;
-
-
-  echo"
-        <div class='cart-summary'>
-            <h3>Resumo do Pedido</h3>
-            <p>Subtotal: " . $finalValue ."</p>
-            <p>Frete: Grátis</p>
-            
-            <h2>Total: ". $finalValue. "</h2>
-            <button class='checkout-btn'>Finalizar Compra</button>
-        </div>
-      ";
       
   } else {
       echo "Seu carrinho está vazio.";
-
   }
-
-//   isset
   
+//   isset
+$finalValue = $_SESSION['valorFinal'] ? number_format($_SESSION['valorFinal'], 2) : 0;
+echo"
+<div class='cart-summary'>
+    <h3>Resumo do Pedido</h3>
+    <p>Subtotal: " . $finalValue ."</p>
+    <p>Frete: Grátis</p>
+    <h2>Total: ". $finalValue. "</h2>
+    <button class='checkout-btn'>Finalizar Compra</button>
+</div>
+";
       
 }
 

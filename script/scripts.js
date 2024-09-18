@@ -14,8 +14,6 @@ document.querySelectorAll('.department-link').forEach(link => {
       });
       return;
     }
-
-    
     document.querySelectorAll('.product-item').forEach(item => {
       item.classList.add('hidden');
     });
@@ -26,3 +24,9 @@ document.querySelectorAll('.department-link').forEach(link => {
     });
   });
 });
+
+let clickCarrinho = document.getElementsByName('add_to_cart');
+
+function openJanelaCarrinho (nome){
+
+}

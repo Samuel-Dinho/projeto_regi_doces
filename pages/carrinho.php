@@ -2,6 +2,7 @@
 session_start();
 
 require '../class/Carrinho.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +32,12 @@ require '../class/Carrinho.php';
             </thead>
             <tbody>
             <?php displayCarte(); ?>
-                
-            
             </tbody>
         </table>
 
         
     </div>
+    <script src="../script/scripts.js"></script>
 </body>
 </html>
 <style>

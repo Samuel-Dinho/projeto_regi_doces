@@ -86,7 +86,7 @@ if ($resultQuery->num_rows > 0) {
                     <input type='hidden' name='item_id' value='" . htmlspecialchars($row2['prod_id_produto']) . "'>
                     <input type='hidden' name='nomeProduto' value='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
                     <input type='hidden' name='valor' value='" . htmlspecialchars($row2['prod_preco']) . "'>
-                    <button class='add-to-cart-btn' type='submit' name='add_to_cart'>
+                    <button onclick='openJanelaCarrinho(". strtoupper(htmlspecialchars($row2['prod_nome_produto'])) . ")' class='add-to-cart-btn' type='submit' name='add_to_cart'>
                         <span class='cart-icon'>🛒</span> Adicionar ao Carrinho
                     </button>
                 </form>
