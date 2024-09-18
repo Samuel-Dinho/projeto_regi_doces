@@ -25,8 +25,21 @@ document.querySelectorAll('.department-link').forEach(link => {
   });
 });
 
-let clickCarrinho = document.getElementsByName('add_to_cart');
+$(document).ready(function() {
+    $('#meuFormulario').on('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
 
-function openJanelaCarrinho (nome){
-  
-}
+        $.ajax({
+            url: 'seu-script.php', // URL do seu script que processa os dados
+            type: 'POST',
+            data: $(this).serialize(), // Serializa os dados do formulário
+            success: function(response) {
+                $('#resultado').html(response); // Exibe a resposta
+            },
+            error: function() {
+                $('#resultado').html('Ocorreu um erro.'); // Exibe mensagem de erro
+            }
+        });
+    });
+});
+

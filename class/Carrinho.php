@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $quantity = $_SESSION['cart'][$itemIdToAdd]['quantity'];
             // Atualiza a quantidade do item existente
             $_SESSION['cart'][$itemIdToAdd]['quantity'] = $quantity + 1;
-            header('Location: Carrinho.php');
+//            header('Location: Carrinho.php');
            
         }
     }
@@ -61,14 +61,14 @@ function displayCarte() {
           $total = $valor * $quantity;
           $_SESSION['valorFinal'] = $valor * $quantity + $valorTotal;
           echo "<tr>
-                    <td>
+                    <td data-label='Produto'>
                         <div class='product-info'>
                             <img src='". htmlspecialchars($imagePath) ."' alt='Produto 1'>
                             <span>" . htmlspecialchars($nomeProduto) ."</span>
                         </div>
                     </td>
-                    <td>". number_format($valor, 2, ',', '.') ."</td>
-                    <td class='formatInput'>
+                    <td data-label='Preço'>". number_format($valor, 2, ',', '.') ."</td>
+                    <td data-label='Quantidade' class='formatInput'>
                         <label type='number' value='". htmlspecialchars($quantity) . "'>
                         ". htmlspecialchars($quantity) . "</label>
                         <form method='post' class='adicionarRemover'>
@@ -80,8 +80,8 @@ function displayCarte() {
                         <input class='remove-btn' type='submit' value='-'>
                         </form>
                     </td>
-                    <td>" . number_format($total, 2, ',', '.') . "</td>
-                    <td>
+                    <td data-label='Total'>" . number_format($total, 2, ',', '.') . "</td>
+                    <td data-label='Remover'>
                     <form method='POST' style='display:inline;' class='adicionarRemover'>
                     <input  type='hidden' name='remove' value='" . htmlspecialchars($itemId) . "'>
                     <input id='click' onclick='openJanelaCarrinho(". htmlspecialchars($nomeProduto) .")' class='remove-btn ' type='submit' value='Remover'>

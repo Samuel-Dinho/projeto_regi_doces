@@ -198,5 +198,13 @@ input[type="number"] {
 ::-webkit-scrollbar-thumb:hover {
   
 }
+@media (max-width: 768px) {
+    .cart-container{
+        display: block;
+    }
+    .cart-summary{
+        margin: 10px auto;
+    }
+}
 
 </style>

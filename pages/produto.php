@@ -13,7 +13,7 @@
         <title>Produtos</title>
         <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/styleDepartamento.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -47,5 +47,5 @@
 
     </html>
     <script src="../script/scripts.js"></script>
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </php>

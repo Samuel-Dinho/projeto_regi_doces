@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
     if (isset($_SESSION['cart'][$itemId])) {
         // Atualiza a quantidade do item existente
         $_SESSION['cart'][$itemId]['quantity'] += $quantity;
-        header('Location: ../../pages/produto.php');
+       /* header('Location: ../../pages/produto.php');*/
     } else {
         // Adiciona o novo item ao carrinho
         $_SESSION['cart'][$itemId] = [
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
             'imagePath' => $imagePath
 
         ];
-        header('Location: ../../pages/produto.php');
+      //  header('Location: ../../pages/produto.php');
     }
 }
 
@@ -76,17 +76,20 @@ if ($resultQuery->num_rows > 0) {
         echo "
         <div name='" . htmlspecialchars($row2['prod_id_produto']) . "' id='" . htmlspecialchars($row2['prod_id_produto']) . "' class='product-item items-" . htmlspecialchars($row2['categoria']) . "'>
             <div class='info-prod'>
-                <form method='post'>
+                <form id='form-prod' method='post'>
                     <h2>" . strtoupper(htmlspecialchars($row2['prod_nome_produto'])) . "</h2>
                     <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
                     <input type='hidden' name='imagePath' value='". htmlspecialchars($imagePath) ."'>
                     <input type='hidden' name='imageAlt' value='" . htmlspecialchars($row2['prod_nome_produto']). "'>
                     <p>R$: " . number_format($row2['prod_preco'], 2, ',', '.') . "</p> <!-- Exibir o preço diretamente -->
+                    <input type='hidden' name='disponibilidade' value='".htmlspecialchars($row2['prod_quantidade'])."'>
+                    <p>Disponivel: ". htmlspecialchars($row2['prod_quantidade']) ."</p>
                     <span><b>Descrição: </b>" . htmlspecialchars($row2['prod_descricao']) . "</span>
+                    <p>Rotulo: ". htmlspecialchars(($row2['prod_rotulo'])) . "</p>
                     <input type='hidden' name='item_id' value='" . htmlspecialchars($row2['prod_id_produto']) . "'>
                     <input type='hidden' name='nomeProduto' value='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
                     <input type='hidden' name='valor' value='" . htmlspecialchars($row2['prod_preco']) . "'>
-                    <button onclick='openJanelaCarrinho(". strtoupper(htmlspecialchars($row2['prod_nome_produto'])) . ")' class='add-to-cart-btn' type='submit' name='add_to_cart'>
+                    <button class='add-to-cart-btn' type='submit' name='add_to_cart'>
                         <span class='cart-icon'>🛒</span> Adicionar ao Carrinho
                     </button>
                 </form>
