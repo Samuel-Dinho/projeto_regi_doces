@@ -80,8 +80,7 @@ require '../class/Carrinho.php';
 .cart-container{
     display: flex;
     align-content: flex-start;
-    justify-content: space-evenly;
-    flex-direction: row;
+    justify-content: center;
 }
 
 h1 {
@@ -93,12 +92,12 @@ h1 {
     overflow: auto;
 }
 .cart-table {
-    width: 80%;
+    margin: 0 auto 10px ;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    
     overflow: scroll;
     max-height: 300px;
-    margin-top: 0;
+    
 }
 
 .cart-table th, .cart-table td {
@@ -151,6 +150,7 @@ input[type="number"] {
 }
 
 .cart-summary {
+    margin: 0 2% auto;
     text-align: right;
     width: 200px;
     border-style: groove;
