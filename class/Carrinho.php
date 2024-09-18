@@ -68,23 +68,23 @@ function displayCarte() {
                         </div>
                     </td>
                     <td>". number_format($valor, 2, ',', '.') ."</td>
-                    <td>
+                    <td class='formatInput'>
                         <label type='number' value='". htmlspecialchars($quantity) . "'>
                         ". htmlspecialchars($quantity) . "</label>
-                        <form method='post'>
+                        <form method='post' class='adicionarRemover'>
                         <input type='hidden' value='" . htmlspecialchars($itemId) . "' name='+'></button>
                         <input class='remove-btn' type='submit' value='+'>
                         </form>
-                        <form method='post'>
+                        <form method='post' class='adicionarRemover'>
                         <input type='hidden' value='" . htmlspecialchars($itemId) . "' name='-'></button>
                         <input class='remove-btn' type='submit' value='-'>
                         </form>
                     </td>
                     <td>" . number_format($total, 2, ',', '.') . "</td>
                     <td>
-                    <form method='POST' style='display:inline;'>
+                    <form method='POST' style='display:inline;' class='adicionarRemover'>
                     <input  type='hidden' name='remove' value='" . htmlspecialchars($itemId) . "'>
-                    <input id='click' onclick='openJanelaCarrinho(". htmlspecialchars($nomeProduto) .")' class='remove-btn' type='submit' value='Remover'>
+                    <input id='click' onclick='openJanelaCarrinho(". htmlspecialchars($nomeProduto) .")' class='remove-btn ' type='submit' value='Remover'>
                     </form>
                         
                     </td>
@@ -99,17 +99,21 @@ function displayCarte() {
   }
   
 //   isset
-$finalValue = $_SESSION['valorFinal'] ? number_format($_SESSION['valorFinal'], 2) : 0;
-echo"
-<div class='cart-summary'>
-    <h3>Resumo do Pedido</h3>
-    <p>Subtotal: " . $finalValue ."</p>
-    <p>Frete: Grátis</p>
-    <h2>Total: ". $finalValue. "</h2>
-    <button class='checkout-btn'>Finalizar Compra</button>
-</div>
-";
+
       
+}
+
+function displayTotal(){
+    $finalValue = $_SESSION['valorFinal'] ? number_format($_SESSION['valorFinal'], 2) : 0;
+    echo"
+    <div class='cart-summary'>
+        <h3>Resumo do Pedido</h3>
+        <p>Subtotal: " . $finalValue ."</p>
+        <p>Frete: Grátis</p>
+        <h2>Total: ". $finalValue. "</h2>
+        <button class='checkout-btn'>Finalizar Compra</button>
+    </div>
+    ";
 }
 
 

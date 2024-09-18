@@ -16,12 +16,14 @@ if ($result->num_rows > 0) {
         // Exibe o produto
         echo "
             <div class='grid-item'>
+            
                 <a href='pages/produto.php#" . htmlspecialchars($row['prod_id_produto']) . "'>
                     <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row['prod_nome_produto']) . "' class='product-image'>
                 </a>
                 <h2 class='product-title'>" . htmlspecialchars($row['prod_nome_produto']) . "</h2>
                 <p class='product-price'>R$: " . number_format($row['prod_preco'], 2, ',', '.') . "</p>
-                <button class='add-to-cart'>Adicionar ao Carrinho</button>
+                <a href='pages/produto.php#" . htmlspecialchars($row['prod_id_produto']) . "' class='btn btn-primary'>Ver Produto</a>
+            
             </div>
         ";
     }

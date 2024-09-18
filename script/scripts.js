@@ -28,5 +28,5 @@ document.querySelectorAll('.department-link').forEach(link => {
 let clickCarrinho = document.getElementsByName('add_to_cart');
 
 function openJanelaCarrinho (nome){
-
+  
 }

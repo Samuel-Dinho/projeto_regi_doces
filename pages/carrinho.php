@@ -11,16 +11,37 @@ require '../class/Carrinho.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../style/style.css">
  
 </head>
 <body>
+    <header>
+            <nav class="menu">
+                <button class="menu-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="produto.php">Produto</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="">Carrinho</a></li>
+                    <li><a href="#">Conta</a></li>
+                </ul>
+
+            </nav>
+            <h1 class="name">Delicias da Regi</h1>
+    </header>
+    <h1>Meu Carrinho</h1>
     <div class="cart-container">
-        <h1>Meu Carrinho</h1>
+        
         <?php
 
-?>
-
+?>  
+        <div class='div-table'>
         <table class="cart-table">
+         
             <thead>
                 <tr>
                     <th>Produto</th>
@@ -34,8 +55,8 @@ require '../class/Carrinho.php';
             <?php displayCarte(); ?>
             </tbody>
         </table>
-
-        
+        </div>
+        <?php displayTotal(); ?>
     </div>
     <script src="../script/scripts.js"></script>
 </body>
@@ -47,7 +68,7 @@ require '../class/Carrinho.php';
     margin: 0;
     padding: 0;
 }
-
+/*
 .cart-container {
     width: 80%;
     margin: 50px auto;
@@ -55,21 +76,47 @@ require '../class/Carrinho.php';
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+    */
+.cart-container{
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
 
 h1 {
     text-align: center;
+    margin: 10px;
 }
-
+.div-table{
+    max-height: 400px;
+    overflow: auto;
+}
 .cart-table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    overflow: scroll;
+    max-height: 300px;
+    margin-top: 0;
 }
 
 .cart-table th, .cart-table td {
-    padding: 15px;
+    border: none;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    
+}
+.formatInput{
+    display: flex;
+    align-items: center;
+}
+.adicionarRemover {
+    border: none;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow:none;
+    background-color: none;
+    
 }
 
 .product-info {
@@ -80,6 +127,7 @@ h1 {
 .product-info img {
     width: 100px;
     margin-right: 10px;
+    max-height: 80px;
 }
 
 input[type="number"] {
@@ -94,7 +142,8 @@ input[type="number"] {
     padding: 8px 12px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
+
 }
 
 .remove-btn:hover {
@@ -103,6 +152,10 @@ input[type="number"] {
 
 .cart-summary {
     text-align: right;
+    width: 200px;
+    border-style: groove;
+    padding: 20px;
+    max-height: 250px;
 }
 
 .cart-summary h3 {
@@ -125,6 +178,25 @@ input[type="number"] {
 
 .checkout-btn:hover {
     background-color: #45a049;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 8px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  
 }
 
 </style>
