@@ -96,7 +96,7 @@
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  max-width: 90%;
+  max-width: 65%;
 
   /* Para telas maiores */
   @media (min-width: 768px) {

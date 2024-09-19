@@ -502,11 +502,6 @@ form button:hover {
     margin: 10px auto;
 }
 
-.form-admin{
-    /*display: flex;
-    align-items: flex-start;
-    /*justify-content: center;*/
-}
 .hidden{
     display: none;
 }

@@ -1579,3 +1579,13 @@ Array
     [valor] => 5
     [add_to_cart] => enviado
 )
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
