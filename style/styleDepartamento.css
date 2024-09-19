@@ -1,5 +1,5 @@
 .container {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 0px 12px;
@@ -27,31 +27,27 @@
   }
 }
 
-.s {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: auto;
-  gap: 12px 18px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . .";
-  grid-area: s;
+.stickDepartamento{
+  
+  position: sticky;
+  margin: 0 auto;
+  position: sticky;
+  top: 20px;
+  @media (max-width: 768px) {
+    position: relative;
+  };
 }
 
 .departamento {
   text-align: left;
-  display: inline-grid;
-  font-size: 2rem;
-  border-style: solid;
-  padding: 20px;
-  box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border-color: #f4f3f5b2;
-  margin: 20px;
+  display: flex;
+  font-size: 3rem;
+  
+  margin: 10px auto;
   position: sticky;
   top: 20px;
- 
   border-radius: 8px;
-
+  justify-content: center;
   /* Para telas maiores */
   @media (min-width: 768px) {
     width: 200px;

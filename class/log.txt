@@ -1,0 +1,1531 @@
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [+] => 1
+)
+Array
+(
+    [+] => 1
+)
+Array
+(
+    [+] => 1
+)
+Array
+(
+    [+] => 1
+)
+Array
+(
+    [+] => 1
+)
+Array
+(
+    [+] => 1
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bolo limão.png
+    [imageAlt] => Alfajor
+    [disponibilidade] => 4
+    [item_id] => 2
+    [nomeProduto] => Alfajor
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 1
+    [item_id] => 5
+    [nomeProduto] => caseirinho
+    [valor] => 15
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => sento de brigadeiro gourmet
+    [disponibilidade] => 3
+    [item_id] => 3
+    [nomeProduto] => sento de brigadeiro gourmet
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/bombom de morango.png
+    [imageAlt] => Pudim
+    [disponibilidade] => 5
+    [item_id] => 1
+    [nomeProduto] => Pudim
+    [valor] => 8
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/brigadeiro.png
+    [imageAlt] => palha italiana
+    [disponibilidade] => 2
+    [item_id] => 4
+    [nomeProduto] => palha italiana
+    [valor] => 5
+    [add_to_cart] => enviado
+)

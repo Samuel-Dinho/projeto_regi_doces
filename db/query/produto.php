@@ -3,8 +3,8 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/db/db.php';
 include '../class/Carrinho.php';
 
-session_start();
 
+/*
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
     $itemId = $_POST['item_id'];
     $nomeProduto = $_POST['nomeProduto'];
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
     if (isset($_SESSION['cart'][$itemId])) {
         // Atualiza a quantidade do item existente
         $_SESSION['cart'][$itemId]['quantity'] += $quantity;
-       /* header('Location: ../../pages/produto.php');*/
+       /* header('Location: ../../pages/produto.php');
     } else {
         // Adiciona o novo item ao carrinho
         $_SESSION['cart'][$itemId] = [
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
       //  header('Location: ../../pages/produto.php');
     }
 }
-
+*/
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['remove'])) {
         $itemIdToRemove = $_POST['remove'];
@@ -53,7 +53,7 @@ $sql = "SELECT Distinct dp.categoria FROM projeto_final.produto as pd inner join
 $result = mysqli_query($conn, $sql);
 
 if ($result->num_rows > 0) {
-    echo "<div class='departamento'>";
+    echo "<div id='depart' class='departamento'>";
     echo "<a href='#' class='department-link' data-department=''>Todos</a>";
     while ($row = $result->fetch_assoc()) {
         echo "
@@ -76,7 +76,7 @@ if ($resultQuery->num_rows > 0) {
         echo "
         <div name='" . htmlspecialchars($row2['prod_id_produto']) . "' id='" . htmlspecialchars($row2['prod_id_produto']) . "' class='product-item items-" . htmlspecialchars($row2['categoria']) . "'>
             <div class='info-prod'>
-                <form id='form-prod' method='post'>
+                <form class='ajax-form' id='form-prod' method='post' action='../class/Carrinho.php'>
                     <h2>" . strtoupper(htmlspecialchars($row2['prod_nome_produto'])) . "</h2>
                     <img src='" . htmlspecialchars($imagePath) . "' alt='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
                     <input type='hidden' name='imagePath' value='". htmlspecialchars($imagePath) ."'>
@@ -89,7 +89,8 @@ if ($resultQuery->num_rows > 0) {
                     <input type='hidden' name='item_id' value='" . htmlspecialchars($row2['prod_id_produto']) . "'>
                     <input type='hidden' name='nomeProduto' value='" . htmlspecialchars($row2['prod_nome_produto']) . "'>
                     <input type='hidden' name='valor' value='" . htmlspecialchars($row2['prod_preco']) . "'>
-                    <button class='add-to-cart-btn' type='submit' name='add_to_cart'>
+                    <input type='hidden' name='add_to_cart' value='enviado'>
+                    <button onclick='addToCart()'' class='add-to-cart-btn' type='submit' name='add_to_cart'>
                         <span class='cart-icon'>🛒</span> Adicionar ao Carrinho
                     </button>
                 </form>

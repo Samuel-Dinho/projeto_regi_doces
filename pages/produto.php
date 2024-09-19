@@ -1,7 +1,8 @@
 <php>
     <?
-    session_start();
-    
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Inicia a sessão apenas se não estiver ativa
+}
     ?>
 
     <!DOCTYPE html>
@@ -28,15 +29,23 @@
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="produto.php">Produto</a></li>
                     <li><a href="sobre.php">Sobre</a></li>
-                    <li><a href="">Carrinho</a></li>
+                    <li><a href="carrinho.php">Carrinho</a></li>
                     <li><a href="#">Conta</a></li>
                 </ul>
 
             </nav>
             <h1 class="name">Delicias da Regi</h1>
         </header>
+        <div id="notification" class="notification hidden">
+            Produto adicionado ao carrinho com sucesso!
 
+            <button id='verCarrinho'>
+                <a href="carrinho.php">Ver Carrinho</a>
+            </button>
+
+        </div>
         <div class="container">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
             <?php  
             include '../db/query/produto.php';
         ?>
@@ -46,6 +55,7 @@
     </body>
 
     </html>
-    <script src="../script/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../script/scripts.js"></script>
+
 </php>
