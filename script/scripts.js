@@ -65,14 +65,19 @@ $(document).ready(function () {
         id = data.id;
         
         document.getElementById('quantity' + id).innerText = data.quantidade;
-        document.getElementById('sub-total').innerText = "Subtotal: R$: " + data.total;
-        document.getElementById('total').innerText = "Total: R$: " + data.total;
-        document.getElementById('totalItem' + id).innerText = "R$: " + data.totalItem;
+        document.getElementById('sub-total').innerText = "Subtotal: R$:" + data.total;
+        document.getElementById('total').innerText = "Total: R$:" + data.total;
+        document.getElementById('totalItem' + id).innerText = "R$:" + data.totalItem;
         if (data.remove) {
           document.getElementById("item" + data.id).remove(); // Remove o item do DOM
         }
         if ($('#total').text() === "Total: R$: 0,00") {
-          $('.cart-table').append("<tr><td colspan='5'>Seu carrinho está vazio.</td></tr>");
+          $('.cart-container').html("<h1>Seu carrinho está vazio.</h1><button id='verCarrinho'><a  href='produto.php'>Adicionar Produto</a></button>");
+          $('.cart-container').css('display','block');
+          $('$verCarrinho').css('margin','auto');
+        }
+        else{
+          $('.cart-container').css('display','flex');
         }
       },
       error: function () {

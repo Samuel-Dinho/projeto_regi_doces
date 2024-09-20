@@ -166,7 +166,7 @@ function displayCarte()
                    
                     <span class="product-name">' . htmlspecialchars($nomeProduto) . '</span>
                     <span class="productPrice">Preço</span>
-                    <span class="productPrice">R$ ' . number_format($valor, 2, ',', '.') . '</span>
+                    <span class="productPrice">R$' . number_format($valor, 2, ',', '.') . '</span>
                     
                 </div>
                 
@@ -202,9 +202,11 @@ function displayCarte()
             </div>
         </div>";
         }
+     
+
     } else {
         $_SESSION['cartQuantidade'] = 0;
-        echo "<tr><td colspan='5'>Seu carrinho está vazio.</td></tr>";
+        echo "<h1>Seu carrinho está vazio.</h1><button id='verCarrinho'><a  href='produto.php'>Adicionar Produto</a></button>";
     }
 }
 
@@ -215,7 +217,6 @@ function displayTotal()
     } else {
         $finalValue = number_format(0, 2);
     }
-
     echo "
     <div class='cart-summary'>
         <h3>Resumo do Pedido</h3>

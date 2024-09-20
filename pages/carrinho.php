@@ -44,10 +44,12 @@ require '../class/Carrinho.php';
 
         <div class='div-table'>
             <?php displayCarte(); ?>
-
-
         </div>
-        <?php displayTotal(); ?>
+        <?php
+        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+         displayTotal(); 
+        }
+         ?>
 
 
     </div>
@@ -105,10 +107,12 @@ require '../class/Carrinho.php';
         margin: 0;
         padding: 20px;
     }
-    h1{
+
+    h1 {
         text-align: center;
     }
-    .remove-btn{
+
+    .remove-btn {
         margin: 10px;
     }
 
@@ -135,6 +139,7 @@ require '../class/Carrinho.php';
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
     }
 
     .cart-title {

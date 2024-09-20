@@ -909,8 +909,8 @@ form button:hover {
 
 #verCarrinho {
     display: block;
-    margin: 10 auto 0;
-    width: 50%;
+    margin: auto;
+   
     background-color: #dbce5f;
     border-radius: 30px;
 }
