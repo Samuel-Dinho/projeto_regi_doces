@@ -143,7 +143,7 @@ function displayQuantidade()
 }
 function displayCarte()
 {
-    echo $_SESSION['cartQuantidade'];
+    
     if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         $_SESSION['valorFinal'] = 0;
 

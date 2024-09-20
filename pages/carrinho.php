@@ -112,12 +112,7 @@ require '../class/Carrinho.php';
 
 </html>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+
 
 .cart-container {
     display: flex;
@@ -137,10 +132,7 @@ h1 {
 
 .cart-table {
     margin: 0 auto 10px;
-    border-collapse: collapse;
-
-    overflow: scroll;
-    max-height: 300px;
+    
 
 }
 
