@@ -1,8 +1,11 @@
 <php>
-    <?
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start(); // Inicia a sessão apenas se não estiver ativa
-}
+
+    <?php
+    include '../class/Carrinho.php';
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start(); // Inicia a sessão apenas se não estiver ativa
+    }
+
     ?>
 
     <!DOCTYPE html>
@@ -34,6 +37,9 @@
                 </ul>
 
             </nav>
+            <div id='carrinho-icon' class='carrinho-icone'>
+                <a href="carrinho.php">🛒<span id='cart-count'><?php displayQuantidade() ?></span></a>
+            </div>
             <h1 class="name">Delicias da Regi</h1>
         </header>
         <div id="notification" class="notification hidden">
@@ -46,9 +52,9 @@
         </div>
         <div class="container">
             <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
-            <?php  
+            <?php
             include '../db/query/produto.php';
-        ?>
+            ?>
         </div>
 
 

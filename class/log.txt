@@ -1589,3 +1589,183 @@ Array
     [valor] => 5
     [add_to_cart] => enviado
 )
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 0
+    [item_id] => 3
+    [nomeProduto] => caseirinho
+    [valor] => 2
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => Bolo
+    [disponibilidade] => 0
+    [item_id] => 2
+    [nomeProduto] => Bolo
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => Bolo
+    [disponibilidade] => 0
+    [item_id] => 2
+    [nomeProduto] => Bolo
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/palha-italiana.png
+    [imageAlt] => caseirinho
+    [disponibilidade] => 0
+    [item_id] => 3
+    [nomeProduto] => caseirinho
+    [valor] => 2
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/sento-brigadeiro.png
+    [imageAlt] => Bolo
+    [disponibilidade] => 0
+    [item_id] => 2
+    [nomeProduto] => Bolo
+    [valor] => 100
+    [add_to_cart] => enviado
+)
+Array
+(
+    [imagePath] => ../imagens/pudim.png
+    [imageAlt] => Pudim k
+    [disponibilidade] => 8
+    [item_id] => 1
+    [nomeProduto] => Pudim k
+    [valor] => 10
+    [add_to_cart] => enviado
+)

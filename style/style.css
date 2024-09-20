@@ -1,26 +1,25 @@
-
 html, body {
     margin: 0px;
     padding: 0px;
     font-family: fangsong;
-    background: linear-gradient(10deg,#ffeb3b91 , #ff69b4a4 );
-    
-}
-header{
-    
+    background: linear-gradient(10deg, #ffeb3b91, #ff69b4a4);
+
 }
 
-.name{
+header {}
+
+.name {
     font-size: 4rem;
     text-align: center;
     /*background-color: #f7aede;;*/
     padding: 2rem 3px 0 0;
     margin: 0;
-    border-bottom-style:solid;
+    border-bottom-style: solid;
     color: dimgrey;
     font-family: fangsong;
 }
-.index{
+
+.index {
     width: 50%;
     margin: 10px auto;
     text-align: left;
@@ -36,6 +35,7 @@ body {
     padding: 0;
     color: #023047
 }
+
 /*login*/
 .page {
     display: flex;
@@ -130,70 +130,102 @@ body {
 /*sobre*/
 /* Estilo geral da seção "Sobre a Empresa" */
 .about-us {
-    background-color: #f4f4f4; /* Fundo leve */
-    padding: 50px 20px; /* Espaçamento interno */
-    font-family: 'Arial', sans-serif; /* Fonte profissional */
+    background-color: #f4f4f4;
+    /* Fundo leve */
+    padding: 50px 20px;
+    /* Espaçamento interno */
+    font-family: 'Arial', sans-serif;
+    /* Fonte profissional */
 }
 
 /* Container para centralizar o conteúdo */
 .about-us-container {
-    max-width: 1000px; /* Aumenta o tamanho máximo para acomodar imagem e texto */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o título */
+    max-width: 1000px;
+    /* Aumenta o tamanho máximo para acomodar imagem e texto */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    /* Centraliza o título */
 }
 
 /* Estilo para o título */
 .about-us-container h2 {
-    font-size: 2.5em; /* Tamanho do título */
-    color: #333; /* Cor escura */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 2.5em;
+    /* Tamanho do título */
+    color: #333;
+    /* Cor escura */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do título */
 }
 
 /* Container para imagem e texto */
 .about-us-content {
-    display: flex; /* Exibe imagem e texto lado a lado */
-    align-items: center; /* Alinha verticalmente */
-    justify-content: space-between; /* Espaça a imagem e o texto */
-    gap: 20px; /* Espaçamento entre imagem e texto */
+    display: flex;
+    /* Exibe imagem e texto lado a lado */
+    align-items: center;
+    /* Alinha verticalmente */
+    justify-content: space-between;
+    /* Espaça a imagem e o texto */
+    gap: 20px;
+    /* Espaçamento entre imagem e texto */
 }
 
 /* Estilo para a imagem */
 .about-us-content img {
-    max-width: 45%; /* Limita a largura da imagem a 45% */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Canto arredondado para a imagem */
+    max-width: 45%;
+    /* Limita a largura da imagem a 45% */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    /* Canto arredondado para a imagem */
 }
 
 /* Estilo para o texto */
 .about-us-text {
-    max-width: 50%; /* Limita a largura do texto */
-    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 50%;
+    /* Limita a largura do texto */
+    text-align: left;
+    /* Alinha o texto à esquerda */
 }
 
 /* Estilo para os parágrafos */
 .about-us-text p {
-    font-size: 1.1em; /* Tamanho da fonte */
-    color: #666; /* Cor suave */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    font-size: 1.1em;
+    /* Tamanho da fonte */
+    color: #666;
+    /* Cor suave */
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+    margin-bottom: 20px;
+    /* Espaçamento entre parágrafos */
     text-align: justify;
 }
-.recuo { text-indent:2em }
+
+.recuo {
+    text-indent: 2em
+}
 
 
 a {
-    color: #007BFF; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado do link */
+    color: #007BFF;
+    /* Cor do link */
+    text-decoration: none;
+    /* Remove sublinhado do link */
 }
 
 a:hover {
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    text-decoration: underline;
+    /* Sublinha o link ao passar o mouse */
 }
-.descricao-cell{
-    overflow: auto; /* Permite rolagem se o conteúdo for longo */
-    max-width: 200px; /* Largura máxima da célula */
-    white-space: nowrap; /* Impede quebra de linha */
-    
+
+.descricao-cell {
+    overflow: auto;
+    /* Permite rolagem se o conteúdo for longo */
+    max-width: 200px;
+    /* Largura máxima da célula */
+    white-space: nowrap;
+    /* Impede quebra de linha */
+
 }
 
 /* Estilos Gerais da Tabela */
@@ -215,21 +247,31 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
-tr{
+
+tr {
     border-style: solid;
 
 }
-tr button{
-    background-color: #28a745;     /* Cor de fundo do botão */
-    color: #ffffff;                /* Cor do texto do botão */
-    border: none;                  /* Sem borda */
-    border-radius: 5px;            /* Bordas arredondadas */
-    cursor: pointer;                /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+
+tr button {
+    background-color: #28a745;
+    /* Cor de fundo do botão */
+    color: #ffffff;
+    /* Cor do texto do botão */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor de fundo */
     padding: 10px;
 }
-tr button:hover{
-    background-color: #218838;     /* Cor de fundo ao passar o mouse */
+
+tr button:hover {
+    background-color: #218838;
+    /* Cor de fundo ao passar o mouse */
     cursor: pointer;
 }
 
@@ -239,10 +281,13 @@ tr button:hover{
 /* Estilos gerais do header */
 header {
     display: flex;
-    flex-direction: column; /* Permite que o título e o menu sejam empilhados */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    
-    padding: 1rem; /* Espaçamento interno do header */
+    flex-direction: column;
+    /* Permite que o título e o menu sejam empilhados */
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+
+    padding: 1rem;
+    /* Espaçamento interno do header */
 }
 
 
@@ -250,9 +295,11 @@ header {
 /* Estilos gerais do menu */
 .menu {
     display: flex;
-    justify-content: space-between; /* Espaça itens do menu e botão de alternância */
+    justify-content: space-between;
+    /* Espaça itens do menu e botão de alternância */
     align-items: center;
-    width: 100%; /* Faz o menu ocupar toda a largura disponível */
+    width: 100%;
+    /* Faz o menu ocupar toda a largura disponível */
 }
 
 .menu ul {
@@ -264,45 +311,65 @@ header {
 
 .menu img {
     height: 40px;
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    margin-right: 10px;
+    /* Espaço entre a imagem e o texto */
 }
 
 .menu li {
     display: flex;
     align-items: center;
-    margin: 0 0.5rem; /* Margem horizontal entre os itens */
-    padding: 10px 20px; /* Espaçamento interno dos itens */
-    border-radius: 10px; /* Bordas arredondadas para os itens */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    margin: 0 0.5rem;
+    /* Margem horizontal entre os itens */
+    padding: 10px 20px;
+    /* Espaçamento interno dos itens */
+    border-radius: 10px;
+    /* Bordas arredondadas para os itens */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transições suaves */
 }
 
 .menu li:hover {
-    background-color: rgba(215, 91, 237, 0.637); /* Cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 10px rgba(241, 253, 4, 0.5); /* Sombra ao passar o mouse */
+    background-color: rgba(215, 91, 237, 0.637);
+    /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(241, 253, 4, 0.5);
+    /* Sombra ao passar o mouse */
 }
 
 .menu a {
-    text-decoration: none; /* Remove sublinhado dos links */
-    color: #ffffff; /* Cor do texto dos links */
-    font-weight: bold; /* Texto em negrito */
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+    color: #ffffff;
+    /* Cor do texto dos links */
+    font-weight: bold;
+    /* Texto em negrito */
 }
 
 .menu a:hover {
-    color: #f7aede; /* Muda a cor do texto ao passar o mouse */
+    color: #f7aede;
+    /* Muda a cor do texto ao passar o mouse */
 }
 
 /* Estilos para o botão de alternância (menu hambúrguer) */
 .menu-toggle {
-    display: none; /* Oculta o botão de alternância por padrão */
+    display: none;
+    /* Oculta o botão de alternância por padrão */
 }
+
 .icon-bar {
-    display: block; /* Torna cada barra um bloco */
-    width: 25px; /* Largura da barra */
-    height: 3px; /* Altura da barra */
-    margin: 4px auto; /* Margem vertical entre as barras */
-    background-color: #333; /* Cor das barras */
-    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+    display: block;
+    /* Torna cada barra um bloco */
+    width: 25px;
+    /* Largura da barra */
+    height: 3px;
+    /* Altura da barra */
+    margin: 4px auto;
+    /* Margem vertical entre as barras */
+    background-color: #333;
+    /* Cor das barras */
+    transition: background-color 0.3s;
+    /* Transição suave para mudança de cor */
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -313,332 +380,478 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
 /* Menu responsivo */
 @media (max-width: 768px) {
-    
+
 
     /* Faz a tabela rolar horizontalmente em telas pequenas */
     table, thead, tbody, td, tr {
         display: block;
-        
+
     }
-    thead, th  {
-        display: none; /* Oculta o cabeçalho */
-       
+
+    thead, th {
+        display: none;
+        /* Oculta o cabeçalho */
+
     }
+
     tr:first-child {
         border-style: none;
     }
-    .div-table table tr:first-child{
+
+    .div-table table tr:first-child {
         border-style: solid;
     }
-    tr{
-        margin-bottom: 15px; /* Espaçamento entre as linhas */
+
+    tr {
+        margin-bottom: 15px;
+        /* Espaçamento entre as linhas */
     }
-    td  {
+
+    td {
         min-height: 25px;
-        text-align: right; /* Alinha o texto à direita */
-        position: relative; /* Para o pseudo-elemento */
-        padding-left: 50%; /* Espaçamento para o pseudo-elemento */
+        text-align: right;
+        /* Alinha o texto à direita */
+        position: relative;
+        /* Para o pseudo-elemento */
+        padding-left: 50%;
+        /* Espaçamento para o pseudo-elemento */
     }
-    td::before  {
+
+    td::before {
         /* Adiciona o rótulo na frente do conteúdo da célula */
         content: attr(data-label);
         position: absolute;
-        left: 10px; /* Posição do rótulo */
+        left: 10px;
+        /* Posição do rótulo */
         width: calc(50% - 20px);
-        text-align: left; /* Alinha o rótulo à esquerda */
-        font-weight: bold; /* Deixa o rótulo em negrito */
+        text-align: left;
+        /* Alinha o rótulo à esquerda */
+        font-weight: bold;
+        /* Deixa o rótulo em negrito */
     }
-    .div-table{
+
+    .div-table {
         width: 100%;
     }
 
     .menu {
-        flex-direction: column; /* Alinha o menu verticalmente em telas pequenas */
-        align-items: flex-start; /* Alinha itens do menu à esquerda */
+        flex-direction: column;
+        /* Alinha o menu verticalmente em telas pequenas */
+        align-items: flex-start;
+        /* Alinha itens do menu à esquerda */
     }
-    
+
     .menu ul {
-        flex-direction: column; /* Alinha itens da lista verticalmente */
-        width: 100%; /* Garante que a lista ocupe a largura completa */
-        display: none; /* Oculta a lista por padrão em telas pequenas */
+        flex-direction: column;
+        /* Alinha itens da lista verticalmente */
+        width: 100%;
+        /* Garante que a lista ocupe a largura completa */
+        display: none;
+        /* Oculta a lista por padrão em telas pequenas */
     }
 
     .menu ul.show {
-        display: flex; /* Mostra a lista quando ativado */
+        display: flex;
+        /* Mostra a lista quando ativado */
     }
-    
+
     .menu-toggle {
-        display: block; /* Mostra o botão de alternância em telas pequenas */
-        background-color: #f7aede; /* Cor de fundo do botão */
+        display: block;
+        /* Mostra o botão de alternância em telas pequenas */
+        background-color: #f7aede;
+        /* Cor de fundo do botão */
         border: none;
         padding: 10px;
         cursor: pointer;
     }
-    
+
     .menu-toggle img {
-        height: 30px; /* Tamanho do ícone do botão de alternância */
+        height: 30px;
+        /* Tamanho do ícone do botão de alternância */
     }
 
     .name {
-        font-size: 2.5rem; /* Diminui o tamanho do título em telas pequenas */
-        text-align: center; /* Centraliza o título */
-        margin: 0.5rem 0; /* Margem reduzida em telas pequenas */
-    }
-    form {
-        padding: 15px; /* Reduz o preenchimento em telas menores */
+        font-size: 2.5rem;
+        /* Diminui o tamanho do título em telas pequenas */
+        text-align: center;
+        /* Centraliza o título */
+        margin: 0.5rem 0;
+        /* Margem reduzida em telas pequenas */
     }
 
-    input[type="text"], input[type="number"]{
-        font-size: 14px; /* Ajusta o tamanho da fonte em telas menores */
+    form {
+        padding: 15px;
+        /* Reduz o preenchimento em telas menores */
     }
-    
-    #file-button{
+
+    input[type="text"], input[type="number"] {
+        font-size: 14px;
+        /* Ajusta o tamanho da fonte em telas menores */
+    }
+
+    #file-button {
         width: 30%;
     }
-    .upload{
+
+    .upload {
         display: grid;
-        
+
     }
-    .form-admin{
+
+    .form-admin {
         display: block;
         flex-direction: column;
     }
-    .form-cria,.editForm{
-        flex: 1 1 100%; 
+
+    .form-cria, .editForm {
+        flex: 1 1 100%;
     }
 }
+
 @media (max-width: 480px) {
-    .form-cria,.editForm{  
-    flex: 1 1 auto;
+    .form-cria, .editForm {
+        flex: 1 1 auto;
     }
 
 }
 
 
 form {
-    max-width: 500px;              /* Largura máxima do formulário */
-    margin: 20px auto;             /* Centraliza o formulário na página */
-    padding: 20px;                 /* Espaçamento interno */
-    border: 1px solid #ccc;        /* Borda do formulário */
-    border-radius: 10px;           /* Bordas arredondadas */
-    background-color: #f9f9f9;     /* Cor de fundo do formulário */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    max-width: 500px;
+    /* Largura máxima do formulário */
+    margin: 20px auto;
+    /* Centraliza o formulário na página */
+    padding: 20px;
+    /* Espaçamento interno */
+    border: 1px solid #ccc;
+    /* Borda do formulário */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: #f9f9f9;
+    /* Cor de fundo do formulário */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
 }
 
 form h2 {
-    text-align: center;             /* Centraliza o título */
-    color: #333;                    /* Cor do texto do título */
+    text-align: center;
+    /* Centraliza o título */
+    color: #333;
+    /* Cor do texto do título */
 }
 
 form label {
-    display: block;                 /* Faz o rótulo ocupar uma linha inteira */
-    margin-bottom: 5px;            /* Espaço abaixo dos rótulos */
-    font-weight: bold;              /* Texto em negrito */
+    display: block;
+    /* Faz o rótulo ocupar uma linha inteira */
+    margin-bottom: 5px;
+    /* Espaço abaixo dos rótulos */
+    font-weight: bold;
+    /* Texto em negrito */
 }
 
-input[type="text"], select ,input[type="number"] {
-    width: 100%;                    /* Largura total do campo */
-    padding: 10px;                 /* Espaçamento interno */
-    margin-bottom: 15px;           /* Espaçamento abaixo dos campos */
-    border: 1px solid #ccc;        /* Borda do campo */
-    border-radius: 5px;            /* Bordas arredondadas */
-    box-sizing: border-box;        /* Inclui padding e borda na largura total */
+input[type="text"], select, input[type="number"] {
+    width: 100%;
+    /* Largura total do campo */
+    padding: 10px;
+    /* Espaçamento interno */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo dos campos */
+    border: 1px solid #ccc;
+    /* Borda do campo */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    box-sizing: border-box;
+    /* Inclui padding e borda na largura total */
 }
 
 form button {
-    width: 100%;                   /* Largura total do botão */
-    padding: 10px;                 /* Espaçamento interno do botão */
-    background-color: #28a745;     /* Cor de fundo do botão */
-    color: #ffffff;                /* Cor do texto do botão */
-    border: none;                  /* Sem borda */
-    border-radius: 5px;            /* Bordas arredondadas */
-    cursor: pointer;                /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    width: 100%;
+    /* Largura total do botão */
+    padding: 10px;
+    /* Espaçamento interno do botão */
+    background-color: #28a745;
+    /* Cor de fundo do botão */
+    color: #ffffff;
+    /* Cor do texto do botão */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor de fundo */
 }
 
 form button:hover {
-    background-color: #218838;     /* Cor de fundo ao passar o mouse */
+    background-color: #218838;
+    /* Cor de fundo ao passar o mouse */
 }
 
 
 .upload {
     /*display: flex; /* Alinha os itens em linha */
-    align-items: center; /* Centraliza verticalmente os itens */
-    margin: 20px 0; /* Margem vertical em torno do parágrafo */
-    padding: 10px; /* Preenchimento interno do parágrafo */
-    border: 1px solid #ccc; /* Borda do parágrafo */
-    border-radius: 8px; /* Bordas arredondadas */
-    background-color: #f9f9f9; /* Cor de fundo do parágrafo */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    margin: 20px 0;
+    /* Margem vertical em torno do parágrafo */
+    padding: 10px;
+    /* Preenchimento interno do parágrafo */
+    border: 1px solid #ccc;
+    /* Borda do parágrafo */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    background-color: #f9f9f9;
+    /* Cor de fundo do parágrafo */
     display: grid;
 }
 
 .upload label {
-    margin-right: 10px; /* Espaço entre o rótulo e o campo de entrada */
-    font-weight: bold; /* Texto em negrito */
-    color: #333; /* Cor do texto do rótulo */
+    margin-right: 10px;
+    /* Espaço entre o rótulo e o campo de entrada */
+    font-weight: bold;
+    /* Texto em negrito */
+    color: #333;
+    /* Cor do texto do rótulo */
     margin: 10px auto;
     text-align: center;
 }
 
 .upload input[type="file"] {
     /*margin-right: 10px; /* Espaço entre o campo de arquivo e o botão */
-    border: 1px solid #ccc; /* Borda do campo de entrada */
-    border-radius: 4px; /* Bordas arredondadas */
-    padding: 5px; /* Preenchimento interno do campo */
-    font-size: 16px; /* Tamanho da fonte do campo */
+    border: 1px solid #ccc;
+    /* Borda do campo de entrada */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    padding: 5px;
+    /* Preenchimento interno do campo */
+    font-size: 16px;
+    /* Tamanho da fonte do campo */
     margin: 10px auto;
     width: 80%;
 }
 
 /* Estilo do botão */
 .upload button {
-    background-color: #007BFF; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 4px; /* Bordas arredondadas no botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #007BFF;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 4px;
+    /* Bordas arredondadas no botão */
+    padding: 10px 20px;
+    /* Espaçamento interno do botão */
     margin: 10px auto;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
-.buttons-admin{
+
+.buttons-admin {
     margin: 10px auto;
     text-align: center;
     display: block;
     align-items: center;
     align-content: space-between;
-   
+
 }
-.buttons-admin button{
-    width: 30%;                   /* Largura total do botão */
-    padding: 10px;                 /* Espaçamento interno do botão */
-    background-color: #28a745;     /* Cor de fundo do botão */
-    color: #ffffff;                /* Cor do texto do botão */
-    border: none;                  /* Sem borda */
-    border-radius: 5px;            /* Bordas arredondadas */
-    cursor: pointer;                /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+
+.buttons-admin button {
+    width: 30%;
+    /* Largura total do botão */
+    padding: 10px;
+    /* Espaçamento interno do botão */
+    background-color: #28a745;
+    /* Cor de fundo do botão */
+    color: #ffffff;
+    /* Cor do texto do botão */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor de fundo */
 }
-.buttons-admin button:hover{
-    background-color: #218838;     /* Cor de fundo ao passar o mouse */
+
+.buttons-admin button:hover {
+    background-color: #218838;
+    /* Cor de fundo ao passar o mouse */
     cursor: pointer;
 }
-#dep-grid{
+
+#dep-grid {
     margin: 10px auto;
 }
-#dep-grid table{
+
+#dep-grid table {
     margin: 10 auto;
     width: 50%;
 }
+
 .products-grid {
-    display: grid; /* Usando grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colunas responsivas */
-    gap: 20px; /* Espaçamento entre os cards */
-    padding: 20px; /* Espaçamento interno do contêiner */
-    align-items: start; /* Alinhamento dos itens ao topo */
+    display: grid;
+    /* Usando grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Colunas responsivas */
+    gap: 20px;
+    /* Espaçamento entre os cards */
+    padding: 20px;
+    /* Espaçamento interno do contêiner */
+    align-items: start;
+    /* Alinhamento dos itens ao topo */
 }
 
 .grid {
-    
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    overflow: hidden; /* Para não deixar a imagem sair do contêiner */
-    transition: transform 0.3s; /* Transição suave para efeito de hover */
-    text-align: center; /* Centraliza o texto */
-    max-height: 500px; /* Limita a altura máxima */
-    margin: auto; /* Centraliza os cards */
+
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    overflow: hidden;
+    /* Para não deixar a imagem sair do contêiner */
+    transition: transform 0.3s;
+    /* Transição suave para efeito de hover */
+    text-align: center;
+    /* Centraliza o texto */
+    max-height: 500px;
+    /* Limita a altura máxima */
+    margin: auto;
+    /* Centraliza os cards */
 }
 
 .grid:hover {
-    transform: scale(1.05); /* Aumenta levemente o tamanho no hover */
+    transform: scale(1.05);
+    /* Aumenta levemente o tamanho no hover */
 }
 
 .product-image {
-    width: 100%; /* Faz a imagem ocupar toda a largura do card */
-    height: 200px; /* Altura fixa para a imagem */
-    object-fit: cover; /* Cobre o espaço mantendo a proporção */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do card */
+    height: 200px;
+    /* Altura fixa para a imagem */
+    object-fit: cover;
+    /* Cobre o espaço mantendo a proporção */
 }
 
 .product-title {
-    font-size: 1.2rem; /* Tamanho da fonte do título */
-    color: #333; /* Cor do texto */
-    margin: 10px 0; /* Espaçamento acima e abaixo */
-    overflow: hidden; /* Oculta o texto que excede */
-    text-overflow: ellipsis; /* Adiciona "..." ao final do texto longo */
-    display: -webkit-box; /* Necessário para usar o truncamento com várias linhas */
-    -webkit-line-clamp: 3; /* Número máximo de linhas exibidas */
-    -webkit-box-orient: vertical; /* Orientação do box em vertical */
+    font-size: 1.2rem;
+    /* Tamanho da fonte do título */
+    color: #333;
+    /* Cor do texto */
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo */
+    overflow: hidden;
+    /* Oculta o texto que excede */
+    text-overflow: ellipsis;
+    /* Adiciona "..." ao final do texto longo */
+    display: -webkit-box;
+    /* Necessário para usar o truncamento com várias linhas */
+    -webkit-line-clamp: 3;
+    /* Número máximo de linhas exibidas */
+    -webkit-box-orient: vertical;
+    /* Orientação do box em vertical */
 }
 
 .product-price {
-    font-size: 1.2rem; /* Tamanho da fonte do preço */
-    color: #28A745; /* Cor verde para o preço */
-    margin: 10px 0; /* Espaçamento acima e abaixo */
+    font-size: 1.2rem;
+    /* Tamanho da fonte do preço */
+    color: #28A745;
+    /* Cor verde para o preço */
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo */
 }
 
 .add-to-cart {
-    background-color: #007BFF; /* Cor de fundo azul */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Remove borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
-    transition: background-color 0.3s; /* Transição suave para efeito de hover */
-    margin-bottom: 10px; /* Espaçamento abaixo do botão */
+    background-color: #007BFF;
+    /* Cor de fundo azul */
+    color: white;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border: none;
+    /* Remove borda padrão */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s;
+    /* Transição suave para efeito de hover */
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do botão */
+    
 }
 
 .add-to-cart:hover {
-    background-color: #0056b3; /* Cor mais escura no hover */
+    background-color: #0056b3;
+    /* Cor mais escura no hover */
 }
 
 /* Estilo para telas menores */
 @media (max-width: 768px) {
     .grid {
-        max-height: none; /* Remove limite de altura em telas menores */
-        width: 90%; /* Aumenta a largura do card em telas menores */
-        margin: 10px auto; /* Espaçamento vertical para evitar que fiquem grudados */
+        max-height: none;
+        /* Remove limite de altura em telas menores */
+        width: 90%;
+        /* Aumenta a largura do card em telas menores */
+        margin: 10px auto;
+        /* Espaçamento vertical para evitar que fiquem grudados */
     }
 
     .product-image {
-        height: 150px; /* Reduz a altura da imagem em telas menores */
+        height: 150px;
+        /* Reduz a altura da imagem em telas menores */
     }
 
     .product-title, .product-price {
-        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 1rem;
+        /* Ajusta o tamanho da fonte para telas menores */
     }
 
     .add-to-cart {
-        padding: 8px 16px; /* Ajusta o padding do botão para telas menores */
+        padding: 8px 16px;
+        /* Ajusta o padding do botão para telas menores */
     }
 }
+
 .fixed-caption {
     position: absolute;
     /*bottom: 20px; /* Ajuste conforme necessário */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: white; /* Cor do texto */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: white;
+    /* Cor do texto */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo semitransparente */
     /*padding:5px; /* Espaçamento interno */
-    width: 100%; /* Para garantir que ocupe toda a largura */
+    width: 100%;
+    /* Para garantir que ocupe toda a largura */
 }
 
 .carousel-item {
-    height: 300px; /* Altura fixa do carrossel */
+    height: 300px;
+    /* Altura fixa do carrossel */
 }
 
 @media (max-width: 768px) {
     .fixed-caption {
-        bottom: 30px; /* Ajuste para telas menores */
-        padding: 5px; /* Ajuste o padding para telas menores */
+        bottom: 30px;
+        /* Ajuste para telas menores */
+        padding: 5px;
+        /* Ajuste o padding para telas menores */
     }
 
     .carousel-item {
-        height: 250px; /* Altura menor para telas menores */
+        height: 250px;
+        /* Altura menor para telas menores */
     }
 }
 
@@ -647,39 +860,50 @@ form button:hover {
 .notification {
     background-color: #4CAF50;
     color: white;
-    padding: 1em; /* Usando 'em' para tamanho relativo */
+    padding: 1em;
+    /* Usando 'em' para tamanho relativo */
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
     border-radius: 5px;
-    font-size: 1em; /* Tamanho do texto ajustável */
+    font-size: 1em;
+    /* Tamanho do texto ajustável */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.5s ease, top 0.5s ease;
-    max-width: 300px; /* Largura máxima padrão */
-    word-wrap: break-word; /* Quebra a linha se o texto for longo */
-  }
-  
-  /* Estilo quando a notificação estiver visível */
-  .notification.show {
+    max-width: 300px;
+    /* Largura máxima padrão */
+    word-wrap: break-word;
+    /* Quebra a linha se o texto for longo */
+}
+
+/* Estilo quando a notificação estiver visível */
+.notification.show {
     opacity: 1;
     top: 50px;
-  }
-  
-  .notification.hidden {
+}
+
+.notification.hidden {
     opacity: 0;
     top: 20px;
-  }
+}
+
 /* Estilo do link "Ver Carrinho" */
 #verCarrinho a {
-    color: black; /* Cor do texto do link */
-    text-decoration: underline; /* Sublinhado */
-    font-weight: bold; /* Negrito */
-    margin: 10px auto; /* Espaço à esquerda */
+    color: black;
+    /* Cor do texto do link */
+    text-decoration: underline;
+    /* Sublinhado */
+    font-weight: bold;
+    /* Negrito */
+    margin: 10px auto;
+    /* Espaço à esquerda */
     padding: 10px;
-    transition: color 0.3s; /* Transição suave para mudança de cor */
+    transition: color 0.3s;
+    /* Transição suave para mudança de cor */
 }
+
 #verCarrinho {
     display: block;
     margin: 10 auto 0;
@@ -689,96 +913,179 @@ form button:hover {
 }
 
 #verCarrinho a:hover {
-    color: #FFF; /* Cor ao passar o mouse */
+    color: #FFF;
+    /* Cor ao passar o mouse */
 }
-  
-  /* Media Query para telas menores */
-  @media (max-width: 768px) {
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
     .notification {
-      top: 10px;
-      right: 10px;
-      left: 10px; /* Centraliza em telas pequenas */
-      font-size: 0.9em; /* Tamanho do texto menor em telas pequenas */
-      padding: 0.8em; /* Reduz o padding em telas pequenas */
-      max-width: none; /* Remove o limite de largura */
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        /* Centraliza em telas pequenas */
+        font-size: 0.9em;
+        /* Tamanho do texto menor em telas pequenas */
+        padding: 0.8em;
+        /* Reduz o padding em telas pequenas */
+        max-width: none;
+        /* Remove o limite de largura */
     }
+
     #verCarrinho a {
-        font-size: 14px; /* Tamanho do link menor */
+        font-size: 14px;
+        /* Tamanho do link menor */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .notification {
-      font-size: 0.8em; /* Tamanho do texto ainda menor para telas muito pequenas */
-      top: 5px;
-      right: 5px;
-      left: 5px; /* Aproxima as bordas da tela */
+        font-size: 0.8em;
+        /* Tamanho do texto ainda menor para telas muito pequenas */
+        top: 5px;
+        right: 5px;
+        left: 5px;
+        /* Aproxima as bordas da tela */
     }
-  }
+}
 
-  
 
-      /* Estilo base do botão de voltar ao topo */
-        .scroll-to-top-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4CAF50; /* Cor do botão */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.4s, visibility 0.4s;
-            z-index: 1000;
-        }
 
-        /* Quando o botão estiver visível */
-        .scroll-to-top-btn.show {
-            opacity: 1;
-            visibility: visible;
-        }
+/* Estilo base do botão de voltar ao topo */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+    z-index: 1000;
+}
 
-        /* Media Queries para tornar o botão responsivo */
-        @media (max-width: 768px) {
-            .scroll-to-top-btn {
-                bottom: 15px;
-                right: 15px;
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-        }
+/* Quando o botão estiver visível */
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
 
-        @media (max-width: 480px) {
-            .scroll-to-top-btn {
-                bottom: 10px;
-                right: 10px;
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-        }
+/* Media Queries para tornar o botão responsivo */
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 
-        #myBtn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed/sticky position */
-            bottom: 20px; /* Place the button at the bottom of the page */
-            right: 30px; /* Place the button 30px from the right */
-            z-index: 99; /* Make sure it does not overlap */
-            border: none; /* Remove borders */
-            outline: none; /* Remove outline */
-            background: linear-gradient(50deg, #ff69b4, #ffeb3b);
-            color: white; /* Text color */
-            cursor: pointer; /* Add a mouse pointer on hover */
-            padding: 15px; /* Some padding */
-            border-radius: 10px; /* Rounded corners */
-            font-size: 10px; /* Increase font size */
-          }
-          
-          #myBtn:hover {
-            background-color: #002efd; /* Add a dark-grey background on hover */
-          }
-  
+@media (max-width: 480px) {
+    .scroll-to-top-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 15px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #700e5b8b;
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 9px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 10px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #700e5bcf;
+    /* Add a dark-grey background on hover */
+}
+
+.cart-icone:hover {
+    background-color: #700e5bcf;
+}
+
+.cart-icone #cart-count:hover {
+    background-color: yellow;
+}
+
+.cart-icone #cart-count {
+    bottom: 4px;
+    padding: 2px;
+    font-size: 0.5rem;
+    right: 9px;
+    top: 7px;
+    color: black;
+    background-color: rgba(255, 255, 0, 0.501);
+}
+
+.cart-icone {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
+    background-color: #700e5b8b;
+    color: white;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.carrinho-icone:hover {
+    background-color: #700e5bcf;
+}
+
+.carrinho-icone {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 4px;
+    color: black;
+    border-radius: 20px;
+    font-size: 1.9rem;
+    text-decoration: none;
+}
+
+#cart-count {
+    position: absolute;
+    top: 19px;
+    right: 21px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    padding: 3px;
+}
+#cart-count:hover{
+    background-color: #ffff00;
+}
