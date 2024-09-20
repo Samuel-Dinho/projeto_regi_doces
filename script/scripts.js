@@ -67,7 +67,7 @@ $(document).ready(function () {
         document.getElementById('quantity' + id).innerText = data.quantidade;
         document.getElementById('sub-total').innerText = "Subtotal: R$: " + data.total;
         document.getElementById('total').innerText = "Total: R$: " + data.total;
-        document.getElementById('totalItem' + id).innerText = data.totalItem;
+        document.getElementById('totalItem' + id).innerText = "R$: " + data.totalItem;
         if (data.remove) {
           document.getElementById("item" + data.id).remove(); // Remove o item do DOM
         }

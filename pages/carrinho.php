@@ -41,178 +41,202 @@ require '../class/Carrinho.php';
     <h1>Meu Carrinho</h1>
     <div class="cart-container">
 
-        <?php
 
-?>
         <div class='div-table'>
-            <table class="cart-table">
+            <?php displayCarte(); ?>
 
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Preço(un)</th>
-                        <th>Quantidade</th>
-                        <th>Total</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php displayCarte(); ?>
-                </tbody>
-            </table>
-            <h1>Agendamento de Data</h1>
-            <input type="date" id="dataAgendamento" min="" value="" />
-            <button onclick="agendar()">Agendar</button>
-            <p id="resultado"></p>
+
         </div>
         <?php displayTotal(); ?>
+
+
     </div>
 
-
+    <h1>Agendamento de Data</h1>
+    <input type="date" id="dataAgendamento" min="" value="" />
+    <button onclick="agendar()">Agendar</button>
+    <p id="resultado"></p>
     <script>
-    // Função para definir o mínimo de dias e valor padrão
-    function definirMinimoEValor() {
-        const dataAtual = new Date();
-        const dataMinima = new Date(dataAtual);
-        dataMinima.setDate(dataAtual.getDate() + 3);
+        // Função para definir o mínimo de dias e valor padrão
+        function definirMinimoEValor() {
+            const dataAtual = new Date();
+            const dataMinima = new Date(dataAtual);
+            dataMinima.setDate(dataAtual.getDate() + 3);
 
-        // Formata a data no formato YYYY-MM-DD
-        const dia = String(dataMinima.getDate()).padStart(2, '0');
-        const mes = String(dataMinima.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
-        const ano = dataMinima.getFullYear();
-        const dataFormatada = `${ano}-${mes}-${dia}`;
+            // Formata a data no formato YYYY-MM-DD
+            const dia = String(dataMinima.getDate()).padStart(2, '0');
+            const mes = String(dataMinima.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            const ano = dataMinima.getFullYear();
+            const dataFormatada = `${ano}-${mes}-${dia}`;
 
-        // Define o mínimo e o valor padrão
-        const inputData = document.getElementById("dataAgendamento");
-        inputData.setAttribute("min", dataFormatada);
-        inputData.setAttribute("value", dataFormatada);
+            // Define o mínimo e o valor padrão
+            const inputData = document.getElementById("dataAgendamento");
+            inputData.setAttribute("min", dataFormatada);
+            inputData.setAttribute("value", dataFormatada);
 
-        // Foca no campo de data para destacar ao carregar a página
-        inputData.focus();
-    }
-
-    function agendar() {
-        const inputData = document.getElementById("dataAgendamento").value;
-        const dataSelecionada = new Date(inputData);
-        const dataAtual = new Date();
-
-        if (dataSelecionada < new Date(dataAtual.getTime() + 3 * 24 * 60 * 60 * 1000)) {
-            document.getElementById("resultado").innerText = "A data deve ser ao menos 3 dias a partir de hoje.";
-        } else {
-            document.getElementById("resultado").innerText = "Data agendada com sucesso para " + dataSelecionada
-                .toLocaleDateString();
+            // Foca no campo de data para destacar ao carregar a página
+            inputData.focus();
         }
-    }
 
-    // Define o mínimo e o valor assim que a página for carregada e foca no campo de data
-    window.onload = definirMinimoEValor;
+        function agendar() {
+            const inputData = document.getElementById("dataAgendamento").value;
+            const dataSelecionada = new Date(inputData);
+            const dataAtual = new Date();
+
+            if (dataSelecionada < new Date(dataAtual.getTime() + 3 * 24 * 60 * 60 * 1000)) {
+                document.getElementById("resultado").innerText = "A data deve ser ao menos 3 dias a partir de hoje.";
+            } else {
+                document.getElementById("resultado").innerText = "Data agendada com sucesso para " + dataSelecionada
+                    .toLocaleDateString();
+            }
+        }
+
+        // Define o mínimo e o valor assim que a página for carregada e foca no campo de data
+        window.onload = definirMinimoEValor;
     </script>
     <script src="../script/scripts.js"></script>
 </body>
 
 </html>
 <style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 20px;
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+    h1{
+        text-align: center;
+    }
+    .remove-btn{
+        margin: 10px;
+    }
 
-.cart-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .product-info {
+        display: flex;
+        align-items: center;
+    }
 
-.cart-title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+    .adicionarRemover {
+        border: none;
+        margin: 0 auto;
+        padding: 10px;
+        box-shadow: none;
+        background-color: transparent;
+        width: 10px;
+    }
 
-.cart-item {
-    display: flex;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fafafa;
-}
+    .cart-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-evenly;
+    }
 
-.product-image {
-    flex: 0 0 100px;
-}
+    .cart-title {
+        text-align: center;
+        font-size: px;
+        margin-bottom: 20px;
+    }
 
-.product-image img {
-    width: 100%;
-    border-radius: 5px;
-}
+    .cart-item {
+        display: flex;
+        padding: 15px;
 
-.product-details {
-    flex: 1;
-    padding: 0 15px;
-}
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fafafa;
 
-.product-name {
-    font-weight: bold;
-}
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
 
-.product-price,
-.product-quantity,
-.product-total {
-    display: block;
-    margin-top: 5px;
-}
+    .product-image {
+        flex: 0 0 100px;
+        max-width: 150px;
+        max-height: 150px;
+    }
 
-.product-actions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
+    .product-image img {
 
-.action-btn,
-.remove-btn {
-    margin-top: 5px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
+        max-width: 150px;
+        max-height: 150px;
+        border-radius: 5px;
+    }
 
-.action-btn {
-    background-color: #28a745; /* Verde */
-    color: white;
-}
+    .product-details {
+        display: flex;
 
-.action-btn:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
+        padding: 0 15px;
+        flex-direction: column;
+        width: 30%;
 
-.remove-btn {
-    background-color: #dc3545; /* Vermelho */
-    color: white;
-}
+    }
 
-.remove-btn:hover {
-    background-color: #c82333;
-    transform: translateY(-2px);
-}
+    .product-name {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 20%;
+    }
 
-.total-container {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: right;
-}
 
-/*
+    .product-quantity,
+    .product-total {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .product-actions {
+        width: 5%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .action-btn,
+    .remove-btn {
+
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .action-btn {
+        background-color: #28a745;
+        /* Verde */
+        color: white;
+    }
+
+    .action-btn:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+    }
+
+    .remove-btn {
+        background-color: #dc3545;
+        /* Vermelho */
+        color: white;
+    }
+
+    .remove-btn:hover {
+        background-color: #c82333;
+        transform: translateY(-2px);
+    }
+
+    .total-container {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    /*
 .cart-container {
     display: flex;
     align-content: flex-start;
@@ -247,19 +271,9 @@ h1 {
     align-items: center;
 }
 
-.adicionarRemover {
-    border: none;
-    margin: 10px auto;
-    padding: 10px;
-    box-shadow: none;
-    background-color: transparent;
 
-}
 
-.product-info {
-    display: flex;
-    align-items: center;
-}
+
 
 .product-info img {
     width: 100px;
@@ -287,64 +301,137 @@ input[type="number"] {
     background-color: #e60000;
 }
 */
-.cart-summary {
-    margin: 0 2% auto;
-    text-align: right;
-    width: 200px;
-    border-style: groove;
-    padding: 20px;
-    max-height: 250px;
-}
-
-.cart-summary h3 {
-    margin-top: 0;
-}
-
-.cart-summary h2 {
-    margin-top: 20px;
-    font-size: 24px;
-}
-
-.checkout-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.checkout-btn:hover {
-    background-color: #45a049;
-}
-
-/* width */
-::-webkit-scrollbar {
-    width: 1px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 1px grey;
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 8px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {}
-
-@media (max-width: 768px) {
-    .cart-container {
-        display: block;
-    }
-
     .cart-summary {
-        margin: 10px auto;
+        margin: 0 2% auto;
+        text-align: right;
+        width: 200px;
+        border-style: groove;
+        padding: 20px;
+        max-height: 250px;
     }
-}
+
+    .cart-summary h3 {
+        margin-top: 0;
+    }
+
+    .cart-summary h2 {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    .checkout-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .checkout-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 1px grey;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 8px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {}
+
+    @media (max-width: 768px) {
+        .cart-container {
+            display: block;
+        }
+
+        .cart-summary {
+            margin: 10px auto;
+        }
+
+        .div-table {
+            display: block;
+        }
+
+        .product-image img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .product-details {
+            display: flex;
+            font-size: 0.5rem;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .product-image {
+            margin: 2px;
+            height: auto;
+            flex: 0;
+        }
+
+        .cart-item {
+            width: auto;
+            padding: 0;
+        }
+
+        .product-name {
+            font-size: 0.6rem;
+            margin: 0;
+        }
+
+        .productPrice {
+            font-size: 0.5rem;
+        }
+
+        .product-details {
+            font-size: 0.4rem;
+        }
+
+        .adicionarRemover {
+            padding: 1px;
+            margin: 1px;
+        }
+
+        .action-btn {
+            padding: 3px 5px;
+            font-size: 2px;
+        }
+
+        #totalQuanti {
+            width: auto;
+            font-size: small;
+            margin: 2px;
+        }
+
+        .remove-btn {
+            font-size: 10px;
+            padding: 2px;
+        }
+
+        .product-actions {
+            width: auto;
+            margin: 1px;
+        }
+
+        .product-quantity,
+        .product-total {
+            font-size: 0.5rem;
+            text-align: center;
+        }
+
+    }
 </style>

@@ -3,7 +3,7 @@ html, body {
     padding: 0px;
     font-family: fangsong;
     background: linear-gradient(10deg, #ffeb3b91, #ff69b4a4);
-
+    width: auto;
 }
 
 
@@ -708,7 +708,10 @@ form button:hover {
     align-items: start;
     /* Alinhamento dos itens ao topo */
 }
-
+#totalQuanti{
+    width: 10%;
+    margin: 15px;
+}
 .grid {
 
     border-radius: 10px;
