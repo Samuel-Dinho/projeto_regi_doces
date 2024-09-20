@@ -112,8 +112,107 @@ require '../class/Carrinho.php';
 
 </html>
 <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
 
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.cart-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.product-image {
+    flex: 0 0 100px;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-details {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-price,
+.product-quantity,
+.product-total {
+    display: block;
+    margin-top: 5px;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.action-btn,
+.remove-btn {
+    margin-top: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.action-btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+.action-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.remove-btn {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.total-container {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*
 .cart-container {
     display: flex;
     align-content: flex-start;
@@ -187,7 +286,7 @@ input[type="number"] {
 .remove-btn:hover {
     background-color: #e60000;
 }
-
+*/
 .cart-summary {
     margin: 0 2% auto;
     text-align: right;
