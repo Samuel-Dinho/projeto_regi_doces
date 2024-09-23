@@ -59,7 +59,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'totalItem' => number_format($total, 2, ',', '.'), // Total do item específico
             'remove' => true // Total do item específico
         ]);
+        
         exit();
+        
     }
 
     // Adicionar mais um item
@@ -195,9 +197,14 @@ function displayCarte()
                 </div>
                 <div class='btnRemove'>
                 <form method='POST' style='display:inline;' class='adicionarRemover' action='Carrinho.php'>
+                
                         <input type='hidden' name='remove' value='" . htmlspecialchars($itemId) . "'>
-                        <input class='remove-btn' type='submit' value='Remover'>
+                      
+                        <input class='remove-btn' type='submit' value='X'>
+                 
+                       
                 </form>
+             
                 </div>
             </div>
         </div>";

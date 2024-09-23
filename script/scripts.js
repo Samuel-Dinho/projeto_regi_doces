@@ -63,7 +63,7 @@ $(document).ready(function () {
       success: function (response) {
         const data = JSON.parse(response); // Analisa a resposta JSON
         id = data.id;
-        
+
         document.getElementById('quantity' + id).innerText = data.quantidade;
         document.getElementById('sub-total').innerText = "Subtotal: R$:" + data.total;
         document.getElementById('total').innerText = "Total: R$:" + data.total;
@@ -71,14 +71,16 @@ $(document).ready(function () {
         if (data.remove) {
           document.getElementById("item" + data.id).remove(); // Remove o item do DOM
         }
-        if ($('#total').text() === "Total: R$: 0,00") {
+        if ($('#total').text() === "Total: R$:0,00") {
+          console.log('foi');
+          $('.cart-container').css('display', 'block');
           $('.cart-container').html("<h1>Seu carrinho está vazio.</h1><button id='verCarrinho'><a  href='produto.php'>Adicionar Produto</a></button>");
-          $('.cart-container').css('display','block');
-          $('$verCarrinho').css('margin','auto');
+          $('$verCarrinho').css('margin', 'auto');
         }
-        else{
-          $('.cart-container').css('display','flex');
+        else {
+          $('.cart-container').css('display', 'flex');
         }
+
       },
       error: function () {
         alert('Ocorreu um erro ao atualizar o carrinho.');
@@ -86,6 +88,9 @@ $(document).ready(function () {
     });
   });
 });
+
+
+
 
 function addToCart() {
   // Lógica de adicionar o produto ao carrinho
@@ -125,7 +130,7 @@ function scrollFunction() {
         depart.classList.remove('departamento');
         depart.classList.add('stickDepartamento');
       }
-      if(cart){
+      if (cart) {
         cart.classList.remove('carrinho-icone');
         cart.classList.add('cart-icone');
       }
@@ -136,7 +141,7 @@ function scrollFunction() {
         depart.classList.add('departamento');
         depart.classList.remove('stickDepartamento');
       }
-      if(cart){
+      if (cart) {
         cart.classList.add('carrinho-icone');
         cart.classList.remove('cart-icone');
       }

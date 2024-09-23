@@ -46,10 +46,10 @@ require '../class/Carrinho.php';
             <?php displayCarte(); ?>
         </div>
         <?php
-        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
-         displayTotal(); 
+        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+            displayTotal();
         }
-         ?>
+        ?>
 
 
     </div>
@@ -119,6 +119,7 @@ require '../class/Carrinho.php';
     .product-info {
         display: flex;
         align-items: center;
+        justify-content: space-around;
     }
 
     .adicionarRemover {
@@ -197,15 +198,13 @@ require '../class/Carrinho.php';
     }
 
     .product-actions {
-        width: 5%;
-        text-align: center;
-        margin: 10px;
+       
     }
 
     .action-btn,
     .remove-btn {
 
-        padding: 8px 15px;
+        padding: 5px 10px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -360,6 +359,7 @@ input[type="number"] {
     @media (max-width: 768px) {
         .cart-container {
             display: block;
+            padding: 5px;
         }
 
         .cart-summary {
@@ -394,12 +394,12 @@ input[type="number"] {
         }
 
         .product-name {
-            font-size: 0.6rem;
+            font-size: 1rem;
             margin: 0;
         }
 
         .productPrice {
-            font-size: 0.5rem;
+            font-size: 0.7rem;
         }
 
         .product-details {
@@ -412,8 +412,8 @@ input[type="number"] {
         }
 
         .action-btn {
-            padding: 3px 5px;
-            font-size: 2px;
+            padding: 2px 2px;
+            font-size: 10px;
         }
 
         #totalQuanti {
@@ -424,7 +424,8 @@ input[type="number"] {
 
         .remove-btn {
             font-size: 10px;
-            padding: 2px;
+            padding: 1px;
+            margin: 1px;
         }
 
         .product-actions {
@@ -434,7 +435,7 @@ input[type="number"] {
 
         .product-quantity,
         .product-total {
-            font-size: 0.5rem;
+            font-size: 0.8rem;
             text-align: center;
         }
 
