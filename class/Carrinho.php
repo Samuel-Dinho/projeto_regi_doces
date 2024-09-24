@@ -184,30 +184,31 @@ function displayCarte()
 
             echo "
                 <div class='product-actions'>
-                    <form method='post' class='adicionarRemover'>
+                    <form method='post' class='adicionarRemover m-0 p-0'>
                         <input type='hidden' name='+' value='" . htmlspecialchars($itemId) . "'>
-                        <input class='action-btn' type='submit' value='+'>
+                        <input class='action-btn btn btn-success btn-number px-2 py-0' type='submit' value='+'>
                     </form>
                 
-                    <form method='post' class='adicionarRemover' action='Carrinho.php'>
+                    <form method='post' class='adicionarRemover m-0 p-0' action='Carrinho.php'>
                         <input type='hidden' name='-' value='" . htmlspecialchars($itemId) . "'>
-                        <input class='action-btn' type='submit' value='-''>
+                        <input class='btn btn-success btn-number px-2 py-0  w-100 mt-1' type='submit' value='-''>
                     </form>
                     
                 </div>
                 <div class='btnRemove'>
-                <form method='POST' style='display:inline;' class='adicionarRemover' action='Carrinho.php'>
+                <form method='POST' style='display:inline;' class='adicionarRemover m-0 p-0' action='Carrinho.php'>
                 
                         <input type='hidden' name='remove' value='" . htmlspecialchars($itemId) . "'>
                       
-                        <input class='remove-btn' type='submit' value='X'>
+                        <input class='btn btn-danger btn-number px-2 py-0' type='submit' value='X'>
                  
                        
                 </form>
              
                 </div>
             </div>
-        </div>";
+        </div>
+       "; 
         }
      
 

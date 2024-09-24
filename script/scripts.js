@@ -72,7 +72,7 @@ $(document).ready(function () {
           document.getElementById("item" + data.id).remove(); // Remove o item do DOM
         }
         if ($('#total').text() === "Total: R$:0,00") {
-          console.log('foi');
+          
           $('.cart-container').css('display', 'block');
           $('.cart-container').html("<h1>Seu carrinho está vazio.</h1><button id='verCarrinho'><a  href='produto.php'>Adicionar Produto</a></button>");
           $('$verCarrinho').css('margin', 'auto');

@@ -518,23 +518,23 @@ input[type="number"] {
 
 }
 
-
+/*
 form {
     max-width: 500px;
-    /* Largura máxima do formulário */
     margin: 20px auto;
-    /* Centraliza o formulário na página */
+
     padding: 20px;
-    /* Espaçamento interno */
+
     border: 1px solid #ccc;
-    /* Borda do formulário */
+
     border-radius: 10px;
-    /* Bordas arredondadas */
+
     background-color: #f9f9f9;
-    /* Cor de fundo do formulário */
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Sombra leve */
+
 }
+*/
 
 form h2 {
     text-align: center;
@@ -708,10 +708,12 @@ form button:hover {
     align-items: start;
     /* Alinhamento dos itens ao topo */
 }
-#totalQuanti{
+
+#totalQuanti {
     width: 10%;
     margin: 15px;
 }
+
 .grid {
 
     border-radius: 10px;
@@ -789,7 +791,7 @@ form button:hover {
     /* Transição suave para efeito de hover */
     margin-bottom: 10px;
     /* Espaçamento abaixo do botão */
-    
+
 }
 
 .add-to-cart:hover {
@@ -910,7 +912,7 @@ form button:hover {
 #verCarrinho {
     display: block;
     margin: auto;
-   
+
     background-color: #dbce5f;
     border-radius: 30px;
 }

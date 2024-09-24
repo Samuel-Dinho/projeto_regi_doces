@@ -16,7 +16,7 @@ require '../class/Carrinho.php';
     <title>Carrinho de Compras</title>
     <link rel="stylesheet" href="../style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,12 +39,13 @@ require '../class/Carrinho.php';
         <h1 class="name">Delicias da Regi</h1>
     </header>
     <h1>Meu Carrinho</h1>
+    <div class='div-table'>
+            <?php displayCarte(); ?>
+        </div>
     <div class="cart-container">
 
 
-        <div class='div-table'>
-            <?php displayCarte(); ?>
-        </div>
+       
         <?php
         if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             displayTotal();
@@ -53,7 +54,11 @@ require '../class/Carrinho.php';
 
 
     </div>
-
+    <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
     <h1>Agendamento de Data</h1>
     <input type="date" id="dataAgendamento" min="" value="" />
     <button onclick="agendar()">Agendar</button>
@@ -111,17 +116,17 @@ require '../class/Carrinho.php';
     h1 {
         text-align: center;
     }
-
+/*
     .remove-btn {
         margin: 10px;
     }
-
+*/
     .product-info {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
-
+/*
     .adicionarRemover {
         border: none;
         margin: 0 auto;
@@ -130,7 +135,7 @@ require '../class/Carrinho.php';
         background-color: transparent;
         width: 10px;
     }
-
+*/
     .cart-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -197,10 +202,7 @@ require '../class/Carrinho.php';
         margin-top: 5px;
     }
 
-    .product-actions {
-       
-    }
-
+/*
     .action-btn,
     .remove-btn {
 
@@ -213,7 +215,7 @@ require '../class/Carrinho.php';
 
     .action-btn {
         background-color: #28a745;
-        /* Verde */
+       
         color: white;
     }
 
@@ -224,7 +226,7 @@ require '../class/Carrinho.php';
 
     .remove-btn {
         background-color: #dc3545;
-        /* Vermelho */
+        
         color: white;
     }
 
@@ -232,7 +234,7 @@ require '../class/Carrinho.php';
         background-color: #c82333;
         transform: translateY(-2px);
     }
-
+*/
     .total-container {
         margin-top: 20px;
         font-size: 18px;
@@ -405,7 +407,7 @@ input[type="number"] {
         .product-details {
             font-size: 0.4rem;
         }
-
+/*
         .adicionarRemover {
             padding: 1px;
             margin: 1px;
@@ -415,7 +417,7 @@ input[type="number"] {
             padding: 2px 2px;
             font-size: 10px;
         }
-
+*/
         #totalQuanti {
             width: auto;
             font-size: small;
