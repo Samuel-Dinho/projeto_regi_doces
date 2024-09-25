@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 require '../class/Carrinho.php';
-
+$session_data = json_encode($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -39,30 +39,22 @@ require '../class/Carrinho.php';
         <h1 class="name">Delicias da Regi</h1>
     </header>
     <h1>Meu Carrinho</h1>
-    <div class='div-table'>
-            <?php displayCarte(); ?>
-        </div>
+    <div class='div-table w-50'>
+        <?php displayCarte(); ?>
+        <h1>Agendamento de Data</h1>
+        <input type="date" id="dataAgendamento" min="" value="" onchange="mudarDataTotal(this.value)" />
+        <button onclick="agendar()">Agendar</button>
+        <p id="resultado"></p>
+    </div>
     <div class="cart-container">
-
-
-       
         <?php
         if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             displayTotal();
         }
         ?>
 
-
     </div>
-    <span class="input-group-btn">
-              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                <span class="glyphicon glyphicon-minus"></span>
-              </button>
-          </span>
-    <h1>Agendamento de Data</h1>
-    <input type="date" id="dataAgendamento" min="" value="" />
-    <button onclick="agendar()">Agendar</button>
-    <p id="resultado"></p>
+
     <script>
         // Função para definir o mínimo de dias e valor padrão
         function definirMinimoEValor() {
@@ -74,34 +66,49 @@ require '../class/Carrinho.php';
             const dia = String(dataMinima.getDate()).padStart(2, '0');
             const mes = String(dataMinima.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
             const ano = dataMinima.getFullYear();
-            const dataFormatada = `${ano}-${mes}-${dia}`;
-
-            // Define o mínimo e o valor padrão
+            let dataFormatada = `${ano}-${mes}-${dia}`;
             const inputData = document.getElementById("dataAgendamento");
             inputData.setAttribute("min", dataFormatada);
             inputData.setAttribute("value", dataFormatada);
-
-            // Foca no campo de data para destacar ao carregar a página
             inputData.focus();
+
         }
 
-        function agendar() {
-            const inputData = document.getElementById("dataAgendamento").value;
-            const dataSelecionada = new Date(inputData);
-            const dataAtual = new Date();
-
-            if (dataSelecionada < new Date(dataAtual.getTime() + 3 * 24 * 60 * 60 * 1000)) {
-                document.getElementById("resultado").innerText = "A data deve ser ao menos 3 dias a partir de hoje.";
-            } else {
-                document.getElementById("resultado").innerText = "Data agendada com sucesso para " + dataSelecionada
-                    .toLocaleDateString();
-            }
+        function mudarDataTotal(data) {
+            let pData = document.getElementById("pData");
+            pData.innerText = "Entrega: " + data.split('-').reverse().join('/');
         }
 
         // Define o mínimo e o valor assim que a página for carregada e foca no campo de data
         window.onload = definirMinimoEValor;
+
+        // Função para pegar todos os itens da sessionStorage e transformar em JSON
+       
+        var sessionData = <?php echo $session_data; ?>;
+        console.log(sessionData); // Aqui você pode acessar os dados da sessão no console do navegador
+
+
+
+  
+        $(document).ready(function() {
+            $('#finalizar').on('click', function(e) {
+                $.ajax({
+                    url: '../class/addCart.php',
+                    type: 'POST',
+                    data: sessionData,
+                    success: function(response) {
+                        console.log(response);
+
+
+
+                    }
+                });
+
+            })
+        })
     </script>
     <script src="../script/scripts.js"></script>
+
 </body>
 
 </html>
@@ -116,7 +123,8 @@ require '../class/Carrinho.php';
     h1 {
         text-align: center;
     }
-/*
+
+    /*
     .remove-btn {
         margin: 10px;
     }
@@ -126,7 +134,8 @@ require '../class/Carrinho.php';
         align-items: center;
         justify-content: space-around;
     }
-/*
+
+    /*
     .adicionarRemover {
         border: none;
         margin: 0 auto;
@@ -202,7 +211,7 @@ require '../class/Carrinho.php';
         margin-top: 5px;
     }
 
-/*
+    /*
     .action-btn,
     .remove-btn {
 
@@ -407,7 +416,8 @@ input[type="number"] {
         .product-details {
             font-size: 0.4rem;
         }
-/*
+
+        /*
         .adicionarRemover {
             padding: 1px;
             margin: 1px;

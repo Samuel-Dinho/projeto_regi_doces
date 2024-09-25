@@ -230,8 +230,10 @@ function displayTotal()
         <h3>Resumo do Pedido</h3>
         <p id='sub-total'>Subtotal: R$:" . $finalValue . "</p>
         <p>Frete: Grátis</p>
+        <p id='pData'>Entrega: </p>
         <h2 id='total'>Total: R$:" . $finalValue . "</h2>
-        <button class='checkout-btn'>Finalizar Compra</button>
+        <button id='finalizar' class='checkout-btn'>Finalizar Compra</button>
     </div>
     ";
+    
 }
