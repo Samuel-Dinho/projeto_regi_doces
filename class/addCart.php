@@ -42,3 +42,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insert->close();
     }
 }
+
+
+
+/*
+CREATE TABLE `projeto_final`.`pedido_has_produto` (
+	`id_pedido_has_produto` int not null AUTO_INCREMENT,
+  `pedido_vend_id_venda` INT NOT NULL,
+  `produto_prod_id_produto` INT NOT NULL,
+  `quantidade` INT NULL,
+  PRIMARY KEY (`id_pedido_has_produto`),
+  INDEX `fk_produto_prod_id_produto_idx` (`produto_prod_id_produto` ASC) ,
+  INDEX `fk_pedido_vend_id_venda_idx` (`pedido_vend_id_venda` ASC) ,
+  CONSTRAINT `fk_pedido_vend_id_venda_idx`
+    FOREIGN KEY (`pedido_vend_id_venda`)
+    REFERENCES `projeto_final`.`pedido` (`vend_id_venda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produto_prod_id_produto_idx`
+    FOREIGN KEY (`produto_prod_id_produto`)
+    REFERENCES `projeto_final`.`produto` (`prod_id_produto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+
+*/
