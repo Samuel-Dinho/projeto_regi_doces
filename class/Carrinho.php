@@ -30,7 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'nomeProduto' => $nomeProduto,
                 'valor' => $valor,
                 'quantity' => $quantity,
-                'imagePath' => $imagePath
+                'imagePath' => $imagePath,
+                'itemId' => $itemId
             ];
         }
         echo json_encode(['success' => true, 'cartQuantidade' => $_SESSION['cartQuantidade']]);
@@ -157,6 +158,7 @@ function displayCarte()
             $quantity = $itemData['quantity'];
             $imagePath = $itemData['imagePath'];
             $total = $valor * $quantity;
+            $itemID = $itemId;
             $_SESSION['valorFinal'] += $total;
             // Atualiza o valor final do carrinho
             echo '  <div id="item' . htmlspecialchars($itemId) . '" class="cart-item">
