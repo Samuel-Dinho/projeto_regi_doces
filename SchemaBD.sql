@@ -77,6 +77,8 @@ CREATE TABLE IF NOT EXISTS `projeto_final`.`produto` (
   `prod_descricao` VARCHAR(100)  COMMENT 'informaçoes sobre o produto',
   `prod_rotulo` VARCHAR(80)  COMMENT 'rotulo do produto',
   `prod_quantidade` INT  DEFAULT 0 COMMENT 'quantidade de produto disponivel\n',
+  `prod_arquivo` varchar(80) comment 'Local do arquivo',
+  `estoque` int(11) comment 'quantidade de produto disponivel',
   `prod_destaque` INT  DEFAULT 0,
   `prod_carrosel` INT  DEFAULT 0,
   `idcategoria` INT ,
@@ -114,6 +116,8 @@ CREATE TABLE `projeto_final`.`pedido_has_produto` (
 `id_pedido` int not null AUTO_INCREMENT,
   `id_produto` INT NOT NULL,
   `quantidade` INT NULL,
+
+  
   PRIMARY KEY (`id_pedido`),
   INDEX `fk_produto_prod_id_produto_idx` (`id_produto` ASC) ,
   CONSTRAINT `fk_produto_idx`

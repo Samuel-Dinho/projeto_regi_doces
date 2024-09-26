@@ -1,72 +1,58 @@
 <?php
 require '../db/db.php';
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+    // Inicia a sessão apenas se não estiver ativa
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['cart'])) {
         date_default_timezone_set('America/Sao_Paulo');
         $data = date("Y-m-d");
-        $idCliente = '1';
+        $idCliente = 1; // Remover aspas para garantir que seja um inteiro
         
-        
-        ////Criar Numero Pedido
-        $stmt = $conn->prepare("INSERT INTO projeto_final.pedido (vend_data, cliente_cl_id_cliente) VALUES (?, ?)");
+        // Criar Número do Pedido
+        $stmt = $conn->prepare("INSERT INTO projeto_final.pedido (vend_data, cl_id) VALUES (?, ?)");
 
         if ($stmt) {
-            $stmt->bind_param("si", $data, $idCliente); // "ssis" indica os tipos: string, string, int, string
+            $stmt->bind_param("si", $data, $idCliente); // "si" (string, int) corresponde aos tipos corretos
             if ($stmt->execute()) {
-                $last_id = $conn->insert_id;
+                $last_id = $conn->insert_id; // Pegar o ID gerado pela inserção do pedido
+                $stmt->close(); // Fechar o statement após a inserção
             } else {
-                echo "Erro ao inserir o produto: " . $stmt->error;
+                echo "Erro ao inserir o pedido: " . $stmt->error;
+                $stmt->close();
+                exit(); // Saia para evitar continuar o processo sem o número do pedido
             }
+        } else {
+            echo "Erro ao preparar a inserção do pedido: " . $conn->error;
+            exit(); // Saia do processo em caso de erro ao preparar
         }
+
+        // Inserir os itens do carrinho
         foreach ($_POST['cart'] as $itemId => $itemData) {
-            $id =  $itemData['itemId'];
+            $id = $itemData['itemId'];
             $nome = $itemData['nomeProduto'];
             $preco = $itemData['valor'];
             $quantidade = $itemData['quantity'];
-            echo $quantidade;
-            $sql = "SELECT * FROM projeto_final.pedido WHERE vend_id_venda = " . $last_id;
-            $result = mysqli_query($conn, $sql);
+            print_r ($quantidade);
 
-            $insert = $conn->prepare("INSERT INTO projeto_final.pedido_has_produto (pedido_vend_id_venda, produto_prod_id_produto,quantidade) VALUES (?, ?, ?)");
+            // Inserir item no pedido_has_produto
+            $insert = $conn->prepare("INSERT INTO projeto_final.pedido_has_produto (id_pedido, id_produto, quantidade) VALUES (?, ?, ?)");
             if ($insert) {
-                $insert->bind_param("iii", $last_id, $id, $quantidade); // "ssis" indica os tipos: string, string, int, string
+                $insert->bind_param("iii", $last_id, $id, $quantidade); // Todos os três valores são inteiros
                 if ($insert->execute()) {
+                    // Inserção bem-sucedida, você pode adicionar mais lógica aqui se necessário
                 } else {
-                    echo "Erro ao inserir o produto: " . $insert->error;
+                    echo "Erro ao inserir o produto no pedido: " . $insert->error;
                 }
+                $insert->close(); // Fechar o statement de inserção para liberar recursos
+            } else {
+                echo "Erro ao preparar a inserção do produto: " . $conn->error;
             }
         }
-
-        $insert->close();
     }
+    $_SESSION['cart'] = [];
 }
 
 
-
-/*
-CREATE TABLE `projeto_final`.`pedido_has_produto` (
-	`id_pedido_has_produto` int not null AUTO_INCREMENT,
-  `pedido_vend_id_venda` INT NOT NULL,
-  `produto_prod_id_produto` INT NOT NULL,
-  `quantidade` INT NULL,
-  PRIMARY KEY (`id_pedido_has_produto`),
-  INDEX `fk_produto_prod_id_produto_idx` (`produto_prod_id_produto` ASC) ,
-  INDEX `fk_pedido_vend_id_venda_idx` (`pedido_vend_id_venda` ASC) ,
-  CONSTRAINT `fk_pedido_vend_id_venda_idx`
-    FOREIGN KEY (`pedido_vend_id_venda`)
-    REFERENCES `projeto_final`.`pedido` (`vend_id_venda`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_produto_prod_id_produto_idx`
-    FOREIGN KEY (`produto_prod_id_produto`)
-    REFERENCES `projeto_final`.`produto` (`prod_id_produto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
-
-
-*/

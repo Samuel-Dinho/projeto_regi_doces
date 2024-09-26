@@ -34,8 +34,8 @@ if ($resultQuery->num_rows > 0) {
         $row2['prod_carrosel'] = $row2['prod_carrosel'] == 1 ? 'Sim' : 'Não';
 
         echo "<tr>
-                <td data-label='id Produto'>" . htmlspecialchars($row2['prod_id_produto']) . "</td>
-                <td data-label='Nome'>" . htmlspecialchars($row2['prod_nome_produto']) . "</td>
+                <td data-label='id Produto'>" . htmlspecialchars($row2['prod_id']) . "</td>
+                <td data-label='Nome'>" . htmlspecialchars($row2['prod_nome']) . "</td>
                 <td data-label='Categoria'> " . htmlspecialchars($row2['categoria']) . "</td>
                 <td data-label='Preço'>R$: " . number_format($row2['prod_preco'], 2, ',', '.') . "</td>
                 <td data-label='Descrição' class='descricao-cell'>" . htmlspecialchars($row2['prod_descricao']) . "</td>
@@ -45,10 +45,10 @@ if ($resultQuery->num_rows > 0) {
                 <td data-label='Carrosel'>" . htmlspecialchars($row2['prod_carrosel']) . "</td>
                 <td data-label='Quantidade'>" . htmlspecialchars($row2['prod_quantidade']) . "</td>
                 <td data-label='Editar'>
-                    <button  onclick='openModal(" . htmlspecialchars($row2['prod_id_produto']) . ")'>Editar</button>
+                    <button  onclick='openModal(" . htmlspecialchars($row2['prod_id']) . ")'>Editar</button>
                 </td>
                 <td data-label='Excluir'>
-                    <button  onclick='openExcluirModal(" . htmlspecialchars($row2['prod_id_produto']) . ")'>Excluir</button>
+                    <button  onclick='openExcluirModal(" . htmlspecialchars($row2['prod_id']) . ")'>Excluir</button>
             </tr>";
     }
 } else {

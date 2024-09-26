@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $rotulo = $_POST['rotulo'];
 
     // Preparar a consulta SQL
-    $stmt = $conn->prepare("INSERT INTO projeto_final.produto (prod_nome_produto, categoria_idcategoria,prod_arquivo, prod_preco, prod_descricao ,prod_rotulo) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO projeto_final.produto (prod_nome, idcategoria,prod_arquivo, prod_preco, prod_descricao ,prod_rotulo) VALUES (?, ?, ?, ?, ?, ?)");
     
     // Verificar se a preparação da consulta foi bem-sucedida
     if ($stmt) {
