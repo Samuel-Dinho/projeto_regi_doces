@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['cart'])) {
         date_default_timezone_set('America/Sao_Paulo');
         $data = date("Y-m-d");
-        $idCliente = 1; // Remover aspas para garantir que seja um inteiro
+        $idCliente = 3;
         
         // Criar Número do Pedido
         $stmt = $conn->prepare("INSERT INTO projeto_final.pedido (vend_data, cl_id) VALUES (?, ?)");

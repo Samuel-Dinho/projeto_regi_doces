@@ -80,7 +80,7 @@ $(document).ready(function () {
         else {
           $('.cart-container').css('display', 'flex');
         }
-
+       
       },
       error: function () {
         alert('Ocorreu um erro ao atualizar o carrinho.');

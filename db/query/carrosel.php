@@ -26,15 +26,15 @@ if ($result->num_rows > 0) {
                 <img src='" . htmlspecialchars($imagePath) . "' 
                      sizes='(max-width: 500px) 500px, (min-width: 601px) 100px' 
                      class='d-block w-100' 
-                     alt='" . htmlspecialchars($row['prod_nome_produto']) . "' 
+                     alt='" . htmlspecialchars($row['prod_nome']) . "' 
                      loading='lazy'
                      style='height:250px;object-fit: contain;'>
               
             </picture>
             <div class='carousel-caption fixed-caption d-block'>
-                <h5>" . htmlspecialchars($row['prod_nome_produto']) . "</h5>
+                <h5>" . htmlspecialchars($row['prod_nome']) . "</h5>
                 <p>R$: " . number_format($row['prod_preco'], 2, ',', '.') . "</p>
-                <a href='pages/produto.php#" . htmlspecialchars($row['prod_id_produto']) . "' class='btn btn-primary'>Ver Produto</a>
+                <a href='pages/produto.php#" . htmlspecialchars($row['prod_id']) . "' class='btn btn-primary'>Ver Produto</a>
             </div>
         </div>";
         $i++;
