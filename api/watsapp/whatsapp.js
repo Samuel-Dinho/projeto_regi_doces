@@ -20,8 +20,8 @@ venom
 
 // Rota para enviar mensagem via Venom Bot
 app.post('/send-message', (req, res) => {
-  const { number, message } = req.body;
-
+  const { message } = req.body;
+  const number =  5547999762985;
   // Verificar se o Venom Bot está pronto
   if (!clientVenom) {
     return res.status(500).json({ error: 'Venom Bot ainda não está pronto' });

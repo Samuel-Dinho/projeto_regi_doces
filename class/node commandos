@@ -1,0 +1,6 @@
+npm init -y
+
+
+npm install venom-bot
+npm install puppeteer
+npm install express
